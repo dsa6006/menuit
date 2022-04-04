@@ -13,7 +13,7 @@
       <script src="js/html5.js"></script>
    <![endif]-->
     <link href="css/common/adm_layout.css" rel="stylesheet" type="text/css">
-    <link href="css/adm_menu/adm_menu.css" rel="stylesheet" type="text/css">
+    <link href="css/notice/notice.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -21,16 +21,16 @@
         <section id="leftMenu">
             <div class="logo"></div>
             <ul class="menus">
-                <li>
+                <li onclick="location.href='sales.html'">
                     <p>매출관리</p>
                 </li>
                 <li onclick="location.href='adm_menu.html'">
                     <p>메뉴관리</p>
                 </li>
-                <li>
+                <li onclick="location.href='order_table.html'">
                     <p>주문 및 테이블관리</p>
                 </li>
-                <li>
+                <li onclick="location.href='adm_evtMgt.html'">
                     <p>이벤트 및 광고관리</p>
                 </li>
                 <li>
@@ -51,7 +51,7 @@
 
             <div class="textTop">
 
-                <h2>메뉴관리</h2>
+                <h2>게시판</h2>
                 <ul class="top_loginOut">
                     <li>
                         <p><span>OOO</span>님 환영합니다.</p>
@@ -62,15 +62,58 @@
 
             </div>
             <div class="btnLine">
-                <button>버튼예시</button>
+                <button>글삭제</button>
+                <button>글쓰기</button>
             </div>
             <div class="mainArea">
-                <ul class="prodMenus mainText">
+                <article class="prodMenus mainText">
+                    <table class="mainArea_table">
+                        <thead>
+                            <tr>
+                                <th>선택</th>
+                                <th>번호</th>
+                                <th>분류</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>작성일시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>1</td>
+                                <td>공지</td>
+                                <td>안녕하세요안녕하세요안녕하세요 안녕하세요안녕하세요안녕하세요안녕하세요 안녕하세요안녕하세요안녕하세요 안녕하세요</td>
+                                <td>admin</td>
+                                <td>2022.04.04</td>
+                            </tr>
 
-                </ul>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>1</td>
+                                <td>공지</td>
+                                <td>안녕하세요안녕하세요안녕하세요</td>
+                                <td>admin</td>
+                                <td>2022.04.04</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="boardPage">
+                        <div class="btn_group" id="PageNumGrp">
+                            <a class="pagingNum pageSel">1</a>
+                        </div>
+                    </div>
+
+                </article>
             </div>
+        </section>
 
-
+        <section id="pop_add">
+            <div class="popText">
+            </div>
+        
         </section>
 
         <script src="js/common/jquery-3.1.1.min.js"></script>

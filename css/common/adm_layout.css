@@ -206,7 +206,10 @@ input::placeholder {
 /* btnLine */
 .btnLine{
   display:flex;
+  padding-left: 1rem;
+  margin: auto 0 0.5rem 0;
 }
+
 
 .btnLine button{
   padding: 0.5rem 2rem 0.4rem 2rem;

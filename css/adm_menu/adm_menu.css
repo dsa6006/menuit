@@ -1,8 +1,21 @@
+/* layout */
+
+.top_cls{
+  justify-content: left;
+  margin-bottom:0;
+}
+
+.top_cls li:first-child select{
+  margin-left:0;
+}
+
+
 
 /* btnLine */
 
 .btnLine{
   display:flex;
+  padding-left:1rem;
 }
 
 /* mainArea */

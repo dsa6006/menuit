@@ -150,6 +150,11 @@ article.prodBtm {
 
 #pop_add input, #pop_add select{
   width:32%;
+  height: 2rem;
+}
+
+#pop_add #btnBox input{
+  height:1rem;
 }
 
 #pop_add .btnLine{
@@ -159,6 +164,8 @@ article.prodBtm {
 #pop_add #btnBox{
   margin-top:1rem;
   justify-content: right;
+  border-top: 1px solid #dedede;
+  padding-top: 1rem;
 }
 
 #pop_add #btnBox li:first-child{
@@ -174,6 +181,14 @@ article.prodBtm {
 
 #pop_add #btnBox button{
   margin-left:.5rem;
+  padding: 0.5rem 2rem 0.4rem 2rem;
+  font-size: 1.1rem;
+  font-family: 'AG_L';
+  BORDER: 0;
+  background: #6d6464;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 0.5rem;
 }
 
 input[type="file"] {

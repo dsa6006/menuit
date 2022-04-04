@@ -1,0 +1,68 @@
+.btnLine{
+  justify-content: flex-end;
+}
+
+section.mainText{
+
+}
+
+.prePay{
+  background:#add35e;
+}
+
+.postPay{
+  background:#d00028;
+}
+
+section.mainText .eachTable{
+    flex-basis: calc((100% - 12vw) / 4);
+    position: relative;
+    margin-bottom: 1.2rem;
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+    max-width: calc((100% - 12vw) / 4);
+    box-shadow: 3px 3px 15px rgba(75, 75, 75, .2);
+    display:flex;
+    flex-direction:column;
+    padding:.6rem;
+}
+
+.eachTable article{
+  display:flex;
+}
+
+.eachTable article.tbName{
+  background:rgba(255,255,255,.75);
+}
+
+.eachTable article.buttons{
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.eachTable article button {
+  padding: 0.5rem 2rem 0.4rem 2rem;
+  font-size: 1.1rem;
+  font-family: 'AG_L';
+  BORDER: 0;
+  background: #6d6464;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+
+
+.orderList li{
+  display:flex;
+}
+
+.orderList li span.prodPrice{
+  margin-left:auto;
+}
+
+.orderList li span.prodPrice:before{
+  content:'￦';
+  display:inline-block;
+  margin-right:6px;
+}

@@ -57,18 +57,41 @@
 	margin-right: 5px;
 }
 
+div.btnLine button {
+	margin-left: 0;
+}
+div.btnLine .writing {
+	margin-left: auto;
+}
+
 #pop_add {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background: rgba(0, 0, 0, 0.5);
+	display: none;
 }
 #pop_add .popText {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: #fff;
-	padding: 1rem;
-	width: 25vw;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5px;
+}
+#pop_add .popText select {
+	margin-top: 6px;
+	padding: 7px;
+	outline: 0;
+}
+#pop_add .popText input {
+	margin-top: 5px;
+}
+#pop_add .popText .edit {
+	height: 350px;
+	border: 1px solid #999;
+	margin-top: 5px;
+}
+#pop_add .popText button {
+	margin-top: 5px;
+	padding: 5px 10px;
+	background-color: #6d6464;
+	outline: 0;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
 }

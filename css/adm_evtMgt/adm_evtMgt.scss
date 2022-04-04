@@ -1,0 +1,166 @@
+.list_table {
+    flex: 1 0 auto;
+}
+
+.btn_row_edit,
+.btn_row_del {
+    padding: .35rem .5rem .25rem;
+    border: 0;
+    font-family: 'AG_L';
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn_row_edit {
+    background-color: #add35e;
+}
+
+.btn_row_del {
+    background-color: #f5ce32;
+}
+
+[data-row-checkbox],
+[data-row-number],
+[data-row-type],
+[data-row-duration],
+[data-row-author],
+[data-row-control] {
+    text-align: center;
+}
+
+.col_checkbox {
+    width: 5%;
+}
+
+[data-row-checkbox] {
+
+}
+
+.col_rownum {
+    width: 5%;
+}
+
+[data-row-number] {
+
+}
+
+.col_rowtype {
+    width: 10%;
+}
+
+[data-row-type] {
+
+}
+
+.col_duration {
+    width: 20%;
+}
+
+[data-row-duration] {
+
+}
+
+.col_title {
+    width: 40%;
+}
+
+[data-row-title] {
+    max-width: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col_author {
+    width: 10%;
+}
+
+[data-row-author] {
+
+}
+
+.col_control {
+    width: 10%;
+}
+
+[data-row-control] {
+
+}
+
+thead {
+    border-bottom: 1px solid #dedede;
+
+    th {
+        padding-block: .5rem;
+        box-shadow: 0 .15rem 0 rgba(0 0 0 / .05);
+    }
+}
+
+tbody {
+    tr {
+        border-bottom: 1px solid #dedede;
+
+        &:hover {
+            background-color: #eee;
+            font-weight: bold;
+        }
+    }
+
+    td {
+        padding-block: .75rem;
+    }
+}
+
+tfoot {
+    td {
+        padding: 1rem;
+    }
+}
+
+.table_pager {
+    position: relative;
+    margin-inline: auto;
+    width: fit-content;
+
+    &::after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+
+    > .pager_item {
+        float: left;
+        padding-block: .25rem .1rem;
+        width: 2rem;
+        border-radius: .2rem;
+        text-align: center;
+        cursor: pointer;
+
+        & + .pager_item {
+            margin-left: .25rem;
+        }
+
+        &.current {
+            background-color: #6d6464;
+            color: #fff;
+            font-weight: bold;
+            pointer-events: none;
+        }
+    }
+
+    > .pager_prev,
+    > .pager_next {
+        position: absolute;
+        top: 0;
+        padding-block: .25rem .1rem;
+        cursor: pointer;
+    }
+
+    > .pager_prev {
+        right: calc(100% + .5rem);
+    }
+
+    > .pager_next {
+        left: calc(100% + .5rem);
+    }
+}

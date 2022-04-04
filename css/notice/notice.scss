@@ -59,7 +59,7 @@
 
 .boardPage {
     position: absolute;
-    bottom:30px;
+    bottom: 30px;
     text-align: center;
     padding: 10px 5px;
     cursor: pointer;
@@ -67,27 +67,59 @@
     .btn_group {
         display: flex;
 
-        a{
+        a {
             margin-right: 5px;
         }
     }
 }
 
 
+div.btnLine {
+
+    button {
+        margin-left: 0;
+    }
+
+    .writing {
+        margin-left: auto;
+    }
+}
+
 
 #pop_add {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,.5);
+
+    display: none;
 
     .popText {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: #fff;
-        padding: 1rem;
-        width: 25vw;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+
+        select {
+            margin-top: 6px;
+            padding: 7px;
+            outline: 0;
+        }
+
+        input {
+            margin-top: 5px;
+        }
+
+        .edit {
+            height: 350px;
+            border: 1px solid #999;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 5px;
+            padding: 5px 10px;
+            background-color: #6d6464;
+            outline: 0;
+            border: 0;
+            color: #fff;
+            cursor: pointer;
+        }
     }
 }

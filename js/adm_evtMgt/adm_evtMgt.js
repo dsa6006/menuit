@@ -4,3 +4,7 @@ const btnAdd = document.querySelector('.btn_add');
 btnSurvey.addEventListener('click', function() {
 
 });
+
+btnAdd.addEventListener('click', function() {
+
+});

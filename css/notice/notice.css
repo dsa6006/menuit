@@ -58,17 +58,5 @@
 }
 
 #pop_add {
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background: rgba(0, 0, 0, 0.5);
-}
-#pop_add .popText {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: #fff;
-	padding: 1rem;
-	width: 25vw;
+	display: block;
 }

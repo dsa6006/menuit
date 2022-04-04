@@ -257,7 +257,7 @@ input::placeholder {
   width:100vw;
   height:100vh;
   background:rgba(0,0,0,.5);
-  display:none;
+  
 }
 
 #pop_add .popText{

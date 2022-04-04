@@ -50,7 +50,6 @@
         <section id="rightText">
 
             <div class="textTop">
-
                 <h2>게시판</h2>
                 <ul class="top_loginOut">
                     <li>
@@ -59,11 +58,10 @@
                     <li>로그아웃</li>
                 </ul>
 
-
             </div>
             <div class="btnLine">
                 <button>글삭제</button>
-                <button class="pop_open">글쓰기</button>
+                <button class="pop_open writing">글쓰기</button>
             </div>
             <div class="mainArea">
                 <article class="prodMenus mainText">
@@ -100,11 +98,12 @@
                         </tbody>
                     </table>
 
-                    <div class="boardPage">
-                        <div class="btn_group" id="PageNumGrp">
-                            <a class="pagingNum pageSel">1</a>
-                        </div>
-                    </div>
+                    <ul class="table_pager">
+                        <li class="pager_prev">이전</li>
+                        <li class="pager_item current">1</li>
+                        <li class="pager_item">2</li>
+                        <li class="pager_next">다음</li>
+                      </ul>
 
                 </article>
             </div>
@@ -134,6 +133,7 @@
         </section>
 
         <script src="js/common/jquery-3.1.1.min.js"></script>
+        <script src="js/common/default.js"></script>
 
 
         <footer id="footer">

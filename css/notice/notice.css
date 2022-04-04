@@ -57,6 +57,16 @@
 	margin-right: 5px;
 }
 
+div.btnLine button {
+	margin-left: 0;
+}
+div.btnLine .writing {
+	margin-left: auto;
+}
+
+#pop_add {
+	display: none;
+}
 #pop_add .popText {
 	width: 50vw;
 	display: flex;
@@ -65,7 +75,8 @@
 }
 #pop_add .popText select {
 	margin-top: 6px;
-	padding: 5px;
+	padding: 7px;
+	outline: 0;
 }
 #pop_add .popText input {
 	margin-top: 5px;
@@ -82,4 +93,5 @@
 	outline: 0;
 	border: 0;
 	color: #fff;
+	cursor: pointer;
 }

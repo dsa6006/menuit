@@ -7,7 +7,12 @@ $(window).on('load', function() {
 }); // 페이지 로딩이 끝났을 때
 
 $(document).ready(function() {
-
+    $(".pop_close").click(function () {
+        $("#pop_add").hide();
+    });
+    $(".pop_open").click(function () {
+        $("#pop_add").show();
+    });
 }); // 페이지가 시작될 때
 
 /* ---------- Plain Javascripts ---------- */
@@ -31,3 +36,8 @@ modalClose.addEventListener('click', function() {
 function notFound(target) {
     $(target).attr('src', '/resources/images/common/not_exist.png');
 } // 존재하지 않는 이미지 대체
+
+
+/* 팝업 공통 */
+
+

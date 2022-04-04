@@ -26,19 +26,7 @@ $(":input[name='u_file']").change(function () {
 //     });
 // }
 
-//신규메뉴등록창 닫기(닫기버튼)
-$(document).ready(function () {
-    $(".add_close").click(function () {
-        $("#pop_add").hide();
-    });
-});
 
-//메뉴추가 버튼 클릭 > 신규메뉴등록창 출력
-$(document).ready(function () {
-    $(".addProd").click(function () {
-        $("#pop_add").show();
-    });
-});
 
 //등록된 메뉴의 이미지 클릭시 수정창 출력
 $(document).ready(function () {

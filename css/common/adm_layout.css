@@ -249,6 +249,27 @@ input::placeholder {
   padding: 0 0 0 1rem;
 }
 
+
+/* popup common layout */
+
+#pop_add{
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  background:rgba(0,0,0,.5);
+  display:none;
+}
+
+#pop_add .popText{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background:#fff;
+  padding:1rem;
+}
+
+
 /* footer */
 footer {
   position: absolute;
@@ -259,9 +280,8 @@ footer {
   color: #6d6464;
   background: #f1f1f1;
   box-shadow: 2px 6px 13px 7px rgb(50 50 50 / 10%);
-
 }
 
 footer p{
   font-size:13px;
-}
+}  

@@ -1,0 +1,93 @@
+.mainArea_table {
+    width: 100%;
+
+    th {
+        border: 1px solid #dedede;
+        padding: 10px 8px;
+
+        &:nth-child(1) {
+            width: 5%;
+        }
+
+        &:nth-child(2) {
+            width: 8%;
+        }
+
+        &:nth-child(3) {
+            width: 10%;
+        }
+
+        &:nth-child(4) {
+            width: 47%;
+        }
+
+        &:nth-child(5) {
+            width: 15%;
+        }
+
+        &:nth-child(6) {
+            width: 15%;
+        }
+
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid #dedede;
+        }
+    }
+
+    td {
+        text-align: center;
+        padding: 20px 5px 0px;
+        margin-bottom: 15px;
+        vertical-align: baseline;
+
+        &:nth-child(4) {
+            width: 100%;
+            text-align: left;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.boardPage {
+    position: absolute;
+    bottom:30px;
+    text-align: center;
+    padding: 10px 5px;
+    cursor: pointer;
+
+    .btn_group {
+        display: flex;
+
+        a{
+            margin-right: 5px;
+        }
+    }
+}
+
+
+
+#pop_add {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+
+    .popText {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 1rem;
+        width: 25vw;
+    }
+}

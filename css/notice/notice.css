@@ -1,0 +1,74 @@
+.mainArea_table {
+	width: 100%;
+}
+.mainArea_table th {
+	border: 1px solid #dedede;
+	padding: 10px 8px;
+}
+.mainArea_table th:nth-child(1) {
+	width: 5%;
+}
+.mainArea_table th:nth-child(2) {
+	width: 8%;
+}
+.mainArea_table th:nth-child(3) {
+	width: 10%;
+}
+.mainArea_table th:nth-child(4) {
+	width: 47%;
+}
+.mainArea_table th:nth-child(5) {
+	width: 15%;
+}
+.mainArea_table th:nth-child(6) {
+	width: 15%;
+}
+.mainArea_table tbody tr {
+	border-bottom: 1px solid #dedede;
+}
+.mainArea_table td {
+	text-align: center;
+	padding: 20px 5px 0px;
+	margin-bottom: 15px;
+	vertical-align: baseline;
+}
+.mainArea_table td:nth-child(4) {
+	width: 100%;
+	text-align: left;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	cursor: pointer;
+}
+
+.boardPage {
+	position: absolute;
+	bottom: 30px;
+	text-align: center;
+	padding: 10px 5px;
+	cursor: pointer;
+}
+.boardPage .btn_group {
+	display: flex;
+}
+.boardPage .btn_group a {
+	margin-right: 5px;
+}
+
+#pop_add {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+}
+#pop_add .popText {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	padding: 1rem;
+	width: 25vw;
+}

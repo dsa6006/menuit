@@ -193,12 +193,16 @@ input::placeholder {
   width:100%;
 }
 
+.top_cls li:first-child select {
+  margin-left: 0;
+}
+
 .top_cls li:last-child{
   
 }
 
 .top_cls li select {
-  padding: .3rem;
+  padding: 0.55rem 0.3rem;
   outline: 0;
   margin-left:.5rem;
 }

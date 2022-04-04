@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+
+
+  <title>제목</title>
+  <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+  <![endif]-->
+  <link href="css/common/adm_layout.css" rel="stylesheet" type="text/css">
+  <link href="css/adm_evtMgt/adm_evtMgt.css" rel="stylesheet" type="text/css">
+  <script src="js/common/jquery-3.1.1.min.js"></script>
+  <script src="js/common/default.js" async></script>
+  <script src="js/adm_evtMgt/adm_evtMgt.js" defer></script>
+</head>
+
+<body>
+
+  <div id="wrap">
+    <section id="leftMenu">
+      <div class="logo"></div>
+      <ul class="menus">
+        <li>
+          <p>매출관리</p>
+        </li>
+        <li>
+          <p>메뉴관리</p>
+        </li>
+        <li>
+          <p>주문 및 테이블관리</p>
+        </li>
+        <li>
+          <p>이벤트 및 광고관리</p>
+        </li>
+        <li>
+          <p>예약 및 대기관리</p>
+        </li>
+        <li>
+          <p>회원관리</p>
+        </li>
+        <li>
+          <p>게시판</p>
+        </li>
+        <li>
+          <p>설정</p>
+        </li>
+      </ul>
+    </section>
+    <section id="rightText">
+
+      <div class="textTop">
+
+        <h2>이벤트 및 광고관리</h2>
+        <ul class="top_loginOut">
+          <li>
+            <p><span>OOO</span>님 환영합니다.</p>
+          </li>
+          <li>로그아웃</li>
+        </ul>
+
+      </div>
+      <div class="btnLine">
+        <button class="btn_survey">설문조사 추가</button>
+        <button class="btn_add">이벤트 및 광고 추가</button>
+      </div>
+      <div class="mainArea">
+        <div class="prodMenus mainText">
+          <table class="list_table" data-table-event>
+            <colgroup>
+              <col class="col_checkbox">
+              <col class="col_rownum">
+              <col class="col_rowtype">
+              <col class="col_duration">
+              <col class="col_title">
+              <col class="col_author">
+              <col class="col_btncont">
+            </colgroup>
+
+            <thead data-table-head>
+              <tr>
+                <th>
+                  <input type="checkbox" name="" id="chkAll">
+                </th>
+                <th>
+                  번호
+                </th>
+                <th>
+                  구분
+                </th>
+                <th>
+                  기간
+                </th>
+                <th>
+                  제목
+                </th>
+                <th>
+                  작성자
+                </th>
+                <th>
+                  관리
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <template data-table-row>
+                <tr class="list_row">
+                  <td data-row-checkbox></td>
+                  <td data-row-number></td>
+                  <td data-row-type></td>
+                  <td data-row-duration>
+                    <span data-dur-start></span><br>
+                    <span data-dur-end></span>
+                  </td>
+                  <td data-row-title></td>
+                  <td data-row-author></td>
+                  <td data-row-control>
+                    <button class="btn_row_edit">수정</button>
+                    <button class="btn_row_del">삭제</button>
+                  </td>
+                </tr>
+              </template> <!-- table row template -->
+
+              <tr class="list_row">
+                <td data-row-checkbox>
+                  <input type="checkbox" class="row_chkbox">
+                </td>
+                <td data-row-number>3</td>
+                <td data-row-type>이벤트</td>
+                <td data-row-duration>
+                  <span data-dur-start>2022. 01. 01</span><br>
+                  ~ <span data-dur-end>2024. 03. 20</span>
+                </td>
+                <td data-row-title>이 땅이 끝나는 곳에서 뭉게구름이 되어 저 푸른 하늘 벗삼아 훨훨 날아다니리라 이 하늘 끝까지 가는 날 맑은 빗물이 되어 가만히 이 땅에 내리면 어디라도 외로울까</td>
+                <td data-row-author>관리자</td>
+                <td data-row-control>
+                  <button class="btn_row_edit">수정</button>
+                  <button class="btn_row_del">삭제</button>
+                </td>
+              </tr>
+
+              <tr class="list_row">
+                <td data-row-checkbox>
+                  <input type="checkbox" class="row_chkbox">
+                </td>
+                <td data-row-number>2</td>
+                <td data-row-type>이벤트</td>
+                <td data-row-duration>
+                  <span data-dur-start>2022. 01. 01</span><br>
+                  ~ <span data-dur-end>2024. 03. 20</span>
+                </td>
+                <td data-row-title>기요오옷</td>
+                <td data-row-author>관리자</td>
+                <td data-row-control>
+                  <button class="btn_row_edit">수정</button>
+                  <button class="btn_row_del">삭제</button>
+                </td>
+              </tr>
+
+              <tr class="list_row">
+                <td data-row-checkbox>
+                  <input type="checkbox" class="row_chkbox">
+                </td>
+                <td data-row-number>1</td>
+                <td data-row-type>이벤트</td>
+                <td data-row-duration>
+                  <span data-dur-start>2022. 01. 01</span><br>
+                  ~ <span data-dur-end>2024. 03. 20</span>
+                </td>
+                <td data-row-title>키요오옷</td>
+                <td data-row-author>관리자</td>
+                <td data-row-control>
+                  <button class="btn_row_edit">수정</button>
+                  <button class="btn_row_del">삭제</button>
+                </td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <td colspan="7">
+                  <ul class="table_pager">
+                    <li class="pager_prev">이전</li>
+                    <li class="pager_item current">1</li>
+                    <li class="pager_item">2</li>
+                    <li class="pager_item">3</li>
+                    <li class="pager_item">4</li>
+                    <li class="pager_item">5</li>
+                    <li class="pager_item">6</li>
+                    <li class="pager_item">7</li>
+                    <li class="pager_item">8</li>
+                    <li class="pager_item">9</li>
+                    <li class="pager_next">다음</li>
+                  </ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p> Copyright ⓒ <b>2022 by MenuIt.</b> All pictures cannot be copied without permission.</p>
+    </footer>
+
+  </div>
+  <!--wrap -->
+
+  <aside id="pop_add">
+    <div class="popText">
+      끼양오롱롱롤오롤로오옹
+    </div>
+  </aside>
+
+
+</body>
+
+</html>

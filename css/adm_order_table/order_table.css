@@ -11,7 +11,8 @@ section.mainText{
 }
 
 .postPay{
-  background:#d00028;
+  /* background:#ea4545; */
+  background:#f5ce32;
 }
 
 section.mainText .eachTable{
@@ -25,6 +26,8 @@ section.mainText .eachTable{
     display:flex;
     flex-direction:column;
     padding:.6rem;
+    color:#444;
+    height:15rem;
 }
 
 .eachTable article{
@@ -33,11 +36,19 @@ section.mainText .eachTable{
 
 .eachTable article.tbName{
   background:rgba(255,255,255,.75);
+  max-width:5rem;
+  margin-bottom:1rem;
+  display: block;
+}
+
+.eachTable article.tbName p{
+  text-align:center;
+  padding: 0.3rem 0.1rem 0.1rem 0.1rem;
 }
 
 .eachTable article.buttons{
   justify-content: flex-end;
-  margin-top: 1rem;
+  margin-top: auto;
 }
 
 .eachTable article button {
@@ -51,14 +62,35 @@ section.mainText .eachTable{
   margin-left: 0.5rem;
 }
 
-
+.orderList{
+  height:8rem;
+  overflow-y:scroll;
+  background:rgba(255,255,255,.2);
+  padding:.5rem
+}
 
 .orderList li{
   display:flex;
 }
 
+.orderList li span.prodName{
+  width:50%;
+}
+
+.orderList li span.quantity{
+  width:25%;
+  text-align: center;
+}
+
+.orderList li span.quantity:after{
+  content:'EA';
+  display:inline-block;
+  margin-left:.2rem;
+}
+
 .orderList li span.prodPrice{
   margin-left:auto;
+  width:25%;
 }
 
 .orderList li span.prodPrice:before{

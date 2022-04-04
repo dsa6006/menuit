@@ -1,0 +1,278 @@
+/* default (reset) */
+
+@use '../modules/colors' as clr;
+
+$rsc: '/resources/'; /* 기본 리소스 경로 */
+$img: $rsc + 'images/';
+$css: $rsc + 'css/';
+$js: $rsc + 'js/';
+$fnt: $rsc + 'fonts/';
+
+/* ---------- loading modern normalize ---------- */
+
+@use 'modern-normalize';
+
+/* ---------- load complete ---------- */
+
+@font-face {
+    font-family: 'Pretendard';
+    src: local('Pretendard'), url($fnt + 'PretendardVariable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------- loading fonts ---------- */
+/* ---------- 기본 형태 선언 시작 ---------- */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+:root {
+    font-size: 20px; /* 사이즈 기본 단위 : 20px */
+    line-height: 1;
+    /* line-height: 1.8; (가독성이 필요한 본문 영역) */
+    /* letter-spacing: -.05rem; (큰 문자열) */
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-size: .7rem; /* 기본 글자 크기 : 14px */
+    font-weight: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+header,
+footer,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+    border: none;
+    object-fit: cover;
+    -webkit-user-drag: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+    &:not([class]) {
+        text-decoration-skip-ink: auto;
+    }
+}
+
+form,
+fieldset {
+    border: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+button,
+input,
+textarea,
+select,
+optgroup {
+    border: none;
+    background: none;
+    font: inherit;
+    vertical-align: middle;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        margin: 0;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+    }
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+hr {
+    clear: both;
+    border: none;
+    background-color: currentColor;
+}
+
+dialog {
+    border: none;
+    outline: none;
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, .75);
+        backdrop-filter: blur(.25rem);
+    }
+}
+
+address {
+    font-style: normal;
+}
+
+kbd {
+    padding: .1rem .3rem;
+    border-top: .05rem solid clr.$g-light;
+    border-bottom: .15rem solid clr.$g-heavy;
+    border-left: .05rem solid clr.$g-light;
+    border-right: .15rem solid clr.$g-heavy;
+    border-radius: .2rem;
+    background-color: clr.$g-mid;
+    background-image: linear-gradient(to bottom right, clr.$g-bold, transparent);
+    font-size: smaller;
+}
+
+code {
+    padding: .2rem;
+    border-radius: .2rem;
+    background-color: clr.$g-dark;
+    color: clr.$main;
+    font-size: smaller;
+}
+
+mark { /* 형광펜 */
+    padding: .2rem;
+    border-radius: .2rem;
+    background-color: clr.$inverted;
+}
+
+ruby { /* 작은 주석 */
+    > rp { /* 주석 표기가 불가능할 때 괄호 표시 */
+
+    }
+
+    > rt { /* 주석 문자열 */
+
+    }
+}
+
+/* ---------- 기본 형태 선언 종료 ---------- */
+/* ---------- 공통 클래스 선언 시작 ---------- */
+
+body.prevent_scroll {
+    overflow: hidden;
+}
+
+#wrap { /* 전체 랩핑 */
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.int_wrap { /* 내부 박스 사이징 */
+    margin: 0 auto;
+    padding: 0 .5rem;
+    width: min(100% - 2rem, 38rem); /* max-width: 760px */
+}
+
+.scr_alt { /* 스크린 리더용 얼터닛 텍스트 */
+    text-indent: -500000rem;
+    overflow: hidden;
+}
+
+.clr_fix::after { /* 클리어픽스 */
+    display: block;
+    clear: both;
+    content: '';
+}
+
+a,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: inherit;
+}
+
+a#skipToMain {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    padding: .5rem;
+    outline: none;
+    transform: translateY(-100%);
+    z-index: 1000;
+
+    &:focus {
+        transform: translateY(0);
+        transition: transform .3s ease-out;
+    }
+}
+
+hr.hf { /* 가로줄 */
+    width: 100%;
+    height: .05rem;
+}
+
+hr.vf { /* 세로줄 */
+    width: .05rem;
+    height: 100%;
+}
+
+span.in-flex { /* 인라인 플렉스 */
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ---------- 공통 클래스 선언 종료 ---------- */

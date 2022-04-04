@@ -1,0 +1,49 @@
+/* common style */
+
+@use '../modules/colors' as clr;
+@use '../modules/mixins' as mix;
+@use '../modules/elements' as elm;
+
+/* ---------- basic ---------- */
+
+body {
+    color: clr.$g-focus;
+}
+
+::-webkit-scrollbar {
+    width: .8rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border: .25rem solid transparent;
+    border-radius: .4rem;
+    background: clr.$g-dark;
+    background-clip: padding-box;
+}
+
+/* ---------- basic ---------- */
+/* ---------- header ---------- */
+
+
+
+/* ---------- header ---------- */
+/* ---------- main ---------- */
+
+
+
+/* ---------- main ---------- */
+/* ---------- footer ---------- */
+
+
+
+/* ---------- footer ---------- */
+/* ---------- repeating items ---------- */
+
+
+
+/* ---------- repeating items ---------- */
+/* ---------- media queries for global elements ---------- */
+
+@media (pointer: coarse) and (hover: none) {
+
+} // Mobile

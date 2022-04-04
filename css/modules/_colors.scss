@@ -1,0 +1,25 @@
+/* ---------- theme colors ---------- */
+
+$theme-hue: 172;
+$theme-saturation: 65%;
+$theme-brightness: 70%;
+$theme-color: hsl($theme-hue, $theme-saturation, $theme-brightness);
+
+/* set concept color above (as HSL format) */
+
+$main: $theme-color;
+$brighter: hsl($theme-hue, ($theme-saturation + 10%), ($theme-brightness + 10%));
+$darker: hsl($theme-hue, ($theme-saturation - 30%), ($theme-brightness - 25%));
+$inverted: hsl(($theme-hue - 180), $theme-saturation, $theme-brightness);
+$activated: hsl(($theme-hue + 15), 100%, $theme-brightness);
+$disabled: hsl($theme-hue, 10%, $theme-brightness);
+$error: hsl(350, 90%, 55%);
+
+/* ---------- gray tones ---------- */
+
+$g-dark: hsl(240 20% 10%);
+$g-focus: hsl(230 20% 53%);
+$g-heavy: hsl(231 20% 73%);
+$g-bold: hsl(240 42% 91%);
+$g-mid: hsl(240 8% 90%);
+$g-light: hsl(240 17% 95%);

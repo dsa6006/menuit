@@ -1,0 +1,32 @@
+/* ---------- whatever else ---------- */
+
+$radius-out: .5rem;
+$radius-in: .2rem;
+
+/* ---------- @keyframes ---------- */
+
+@keyframes popout {
+    30% {
+        transform: scale(0);
+    }
+
+    60% {
+        transform: scale(.9);
+    }
+
+    80% {
+        transform: scale(.75);
+    }
+
+    90% {
+        transform: scale(.95);
+    }
+
+    95% {
+        transform: scale(.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,63 +1,75 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 
+        <title>:: 바로서브 ::</title>
+        <link rel="shortcut icon" type="image/x-icon" href="resources/images/icons/favicon.ico" />
 
-  <title>제목</title>
-  <!--[if lt IE 9]>
-      <script src="js/html5.js"></script>
-   <![endif]-->
-  <link href="css/common/adm_layout.css" rel="stylesheet" type="text/css">
-  <link href="css/login/login.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <div id="wrap">
-    <section id="login_popup">
-      <div class="topBar"><p>관리자 로그인</p></div>
-      <div class="bodyText">
-        <h2>LOGIN YOUR ACCOUNT</h2>
-        <ul>
-          <li>
-            <div class="input_back">
-              <input class="loginId" type="text" placeholder="아이디를 입력하세요">
-            </div>
-            <div class="input_back">
-              <input class="loginPw" type="password" placeholder="비밀번호를 입력하세요">
-            </div>
-          </li>
-          <li>
-            <button>LOGIN</button>
-          </li>
-        </ul>
-        <ul class="btm">
-          <li>
-            <input type="checkbox">
-            <p>아이디 저장</p>
-          </li>
-          <li>
-            <input type="checkbox">
-            <p>비밀번호 저장</p>
-          </li>
-          
-        </ul>
-        
-          
+        <link rel="stylesheet" type="text/css" href="css/common/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/common/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/common/wanderface.css" />
+        <!-- Global CSS -->
 
-        
-        
-        
-        
+        <link rel="stylesheet" type="text/css" href="css/usrInfo/login.css" />
+        <!-- Per-Page CSS -->
 
-      </div>
-    </section>
-    <script src="js/common/jquery-3.1.1.min.js"></script>
-    <script src="js/login/login.js"></script>
-  </div>
-  <!--wrap -->
-</body>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script> <!-- jQuery CDN -->
+        <script type="text/javascript" src="js/common/default.js" defer></script>
+        <!-- Global JavaScript / jQuery -->
+
+        <script type="text/javascript" src="js/usrInfo/login.js" defer></script>
+        <!-- Per-Page JavaScript -->
+
+        <!--[if lt IE 9]>
+            <script src="/resources/js/common/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div id="wrap">
+            <form id="frmLogin" method="dialog">
+                <header>
+                    <h1>로그인</h1>
+                </header>
+
+                <div id="inputContainer">
+                    <fieldset data-input-container>
+                        <input type="email" name="" id="txtID" placeholder="ID@email.com" required>
+                        <legend>아이디</legend>
+                    </fieldset>
+
+                    <fieldset data-input-container>
+                        <input type="password" name="" id="txtPW" placeholder="비밀번호" required>
+                        <legend>비밀번호</legend>
+                    </fieldset>
+
+                    <input type="checkbox" name="idSave" id="chkSaveID">
+                    <label for="chkSaveID">아이디 저장</label>
+                    <input type="checkbox" name="pwSave" id="chkSavePW">
+                    <label for="chkSavePW">비밀번호 저장</label>
+                </div>
+
+                <div class="button_container">
+                    <button type="submit" id="btnLogin">로그인</button>
+                    
+                </div>
+
+                <footer>
+                    &copy; 2022 PineIT
+                </footer>
+                <section id="outMenu">
+                    <ul>
+                        <li><button type="button" id="btnSearchID" onclick="location.href='./registration.html'">아이디를 잊으셨나요?</button></li>
+                        <li><button type="button" id="btnSearchPW" onclick="location.href='./registration.html'">비밀번호를 잊으셨나요?</button></li>
+                        <li><button type="button" id="btnRegister" onclick="location.href='./registration.html'">회원가입하기</button></li>
+                    </ul>
+
+                </section>
+            </form>
+        </div> <!-- #wrap -->
+    </body>
 </html>

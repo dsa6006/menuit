@@ -1,0 +1,164 @@
+/* ---------- theme colors ---------- */
+/* set concept color above (as HSL format) */
+/* ---------- gray tones ---------- */
+/* ---------- @mixin ---------- */
+/* ---------- %placeholder ----------*/
+/* ---------- whatever else ---------- */
+/* ---------- @keyframes ---------- */
+@-webkit-keyframes popout {
+	30% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(0.9);
+	}
+	80% {
+		transform: scale(0.75);
+	}
+	90% {
+		transform: scale(0.95);
+	}
+	95% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes popout {
+	30% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(0.9);
+	}
+	80% {
+		transform: scale(0.75);
+	}
+	90% {
+		transform: scale(0.95);
+	}
+	95% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* login */
+/* ---------- main ---------- */
+#frmLogin {
+	display: flex;
+	flex-flow: column nowrap;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: min(80% - 1rem, 24rem);
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	border-radius: 0.5rem;
+	box-shadow: 0 1rem 2rem -0.5rem rgba(75, 155, 144, 0.5);
+}
+#frmLogin > header,
+#frmLogin > footer {
+	padding: 1rem;
+}
+
+#inputContainer {
+	padding: 1rem;
+}
+
+[data-input-container] {
+	position: relative;
+}
+[data-input-container] + [data-input-container] {
+	margin-top: 1rem;
+}
+[data-input-container] > input {
+	width: 100%;
+	border: 0.05rem solid #e3e3e8;
+}
+[data-input-container] > input::-moz-placeholder {
+	opacity: 0;
+}
+[data-input-container] > input:-ms-input-placeholder {
+	opacity: 0;
+}
+[data-input-container] > input::placeholder {
+	opacity: 0;
+}
+[data-input-container] > legend {
+	position: absolute;
+	bottom: 100%;
+	margin-left: 0.25rem;
+	padding: 0 0.25rem;
+	background-color: white;
+	transform: translateY(50%);
+	transition: 0.15s;
+	pointer-events: none;
+}
+[data-input-container] > input:-moz-placeholder-shown + legend {
+	bottom: 50%;
+	transform: translateY(50%);
+}
+[data-input-container] > input:-ms-input-placeholder + legend {
+	bottom: 50%;
+	transform: translateY(50%);
+}
+[data-input-container] > input:placeholder-shown + legend {
+	bottom: 50%;
+	transform: translateY(50%);
+}
+
+[for=chkSaveID] {
+	margin: 1rem 1rem 0 0;
+}
+
+.button_container {
+	display: flex;
+	padding: 0.5rem 1rem;
+}
+.button_container > button {
+	padding: 0.75rem 1rem;
+	border-radius: 0.2rem;
+	font-size: 1rem;
+}
+
+#btnLogin {
+	flex: 1 0 auto;
+	background: #66edff;
+	color: white;
+}
+
+/* #btnRegister {
+	margin-left: 0.25rem;
+	background: #e3e3e8;
+} */
+
+/* ---------- main ---------- */
+/* ---------- media queries ---------- */
+
+form{
+	position:relative;
+}
+
+#outMenu{
+	position:absolute;
+	bottom:-6.5rem;
+	right:50%;
+	transform:translate(50%);
+}
+
+#outMenu ul{
+
+}
+
+#outMenu ul li{
+	text-decoration: underline;
+	cursor:pointer;
+	text-align:center;
+}

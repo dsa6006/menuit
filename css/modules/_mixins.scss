@@ -1,0 +1,27 @@
+/* ---------- @mixin ---------- */
+
+@mixin common-form-elements { // 폼 요소 공통 스타일
+    padding: .5rem;
+    outline: none;
+    resize: none;
+}
+
+@mixin hide-it { // 폼 요소 기본 형태 숨기기
+    position: absolute;
+    left: -50000rem;
+    opacity: 0;
+
+    & + label {
+        display: inline-flex;
+        position: relative;
+        width: fit-content;
+    }
+}
+
+@mixin text-ellipsis { // 한줄 말줄임 처리
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* ---------- %placeholder ----------*/

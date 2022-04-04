@@ -1,0 +1,250 @@
+/* Wanderface 1.0 */
+
+@use '../modules/colors' as clr;
+@use '../modules/mixins' as mix;
+@use '../modules/elements' as elm;
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+select,
+textarea {
+    @include mix.common-form-elements;
+    border-radius: elm.$radius-in;
+    background-color: white;
+
+    &::placeholder {
+
+    }
+
+    &:hover {
+
+    }
+
+    &:focus {
+
+    }
+
+    &:invalid {
+
+    }
+
+    &:disabled {
+
+    }
+}
+
+select {
+    padding-right: 1.75rem;
+    width: max-content;
+    min-width: 6rem;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width=".75rem" height=".75rem"%3E%3Cpath fill="none" d="M0 0h24v24H0z"/%3E%3Cpath fill="currentColor" d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right .5rem center;
+
+    &:focus {
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width=".75rem" height=".75rem"%3E%3Cpath fill="none" d="M0 0h24v24H0z"/%3E%3Cpath fill="currentColor" d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z"/%3E%3C/svg%3E');
+    }
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+    padding: .5rem;
+    border-radius: .1rem;
+    cursor: pointer;
+
+    > svg {
+        display: block;
+        fill: currentColor;
+    }
+}
+
+input[type="radio"] {
+    @include mix.hide-it;
+
+    & + label {
+        &::before {
+            display: block;
+            margin-right: .25rem;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            background: clr.$disabled;
+            transition: background .1s;
+            vertical-align: middle;
+            content: '';
+        }
+
+        &::after {
+            display: block;
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            background: clr.$brighter;
+            transform: scale(.6);
+            opacity: 0;
+            content: '';
+        }
+    }
+
+    &:checked {
+        & + label {
+            &::before {
+                background: clr.$activated;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+input[type="checkbox"] {
+    @include mix.hide-it;
+
+    & + label {
+        &::before {
+            display: inline-block;
+            margin-right: .25rem;
+            width: 1em;
+            height: 1em;
+            border-radius: elm.$radius-in;
+            background: clr.$disabled;
+            transition: background .1s;
+            vertical-align: middle;
+            content: '';
+        }
+
+        &::after {
+            display: block;
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            border-radius: elm.$radius-in;
+            background: clr.$brighter;
+            transform: scale(.6);
+            opacity: 0;
+            content: '';
+        }
+    }
+
+    &:checked {
+        & + label {
+            &::before {
+                background: clr.$activated;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+input[type="color"] {
+
+}
+
+input[type="range"] {
+
+}
+
+meter {
+
+}
+
+progress {
+
+}
+
+blockquote {
+    margin-bottom: 1rem;
+    padding: .75rem 1rem;
+    border-left: .25rem solid currentColor;
+    border-radius: elm.$radius-in;
+    line-height: 1.8;
+
+    &:is([data-quote-type="info"]) {
+        color: purple; /* 임시 */
+    }
+
+    &:is([data-quote-type="success"]) {
+        color: darkgreen; /* 임시 */
+    }
+
+    &:is([data-quote-type="warning"]) {
+        color: tomato; /* 임시 */
+    }
+
+    &:is([data-quote-type="error"]) {
+        color: red; /* 임시 */
+    }
+}
+
+%layer-elements {
+    position: fixed;
+    padding: 1rem;
+    border-radius: elm.$radius-out;
+    box-shadow: 0 1rem 2rem -.5rem rgba(clr.$darker, .5);
+}
+
+[data-layer-type="toast"] {
+    @extend %layer-elements;
+    top: 2rem;
+    right: 2rem;
+    transform: scale(0);
+    animation: popout .5s 1 forwards;
+
+    &::before {
+        position: absolute;
+        top: .3rem;
+        bottom: .3rem;
+        left: .3rem;
+        width: .3rem;
+        border-radius: elm.$radius-in;
+        background: clr.$main;
+        content: '';
+    }
+}
+
+[data-layer-type="banner"] {
+    @extend %layer-elements;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+[data-layer-type="modal"] {
+    @extend %layer-elements;
+    inset: 0;
+    margin: auto;
+    width: max(16rem);
+    height: max(8rem);
+}
+
+[data-layer-type="alert"] {
+    @extend %layer-elements;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: min(100% - 10rem, 40rem);
+    backdrop-filter: blur(.5rem);
+}

@@ -1,0 +1,256 @@
+@charset "UTF-8";
+/* ---------- theme colors ---------- */
+/* set concept color above (as HSL format) */
+/* ---------- gray tones ---------- */
+/* ---------- @mixin ---------- */
+/* ---------- %placeholder ----------*/
+/* ---------- whatever else ---------- */
+/* ---------- @keyframes ---------- */
+@-webkit-keyframes popout {
+	30% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(0.9);
+	}
+	80% {
+		transform: scale(0.75);
+	}
+	90% {
+		transform: scale(0.95);
+	}
+	95% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes popout {
+	30% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(0.9);
+	}
+	80% {
+		transform: scale(0.75);
+	}
+	90% {
+		transform: scale(0.95);
+	}
+	95% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* Wanderface 1.0 */
+input[type=text],
+input[type=password],
+input[type=search],
+input[type=url],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=time],
+select,
+textarea {
+	padding: 0.5rem;
+	outline: none;
+	resize: none;
+	border-radius: 0.2rem;
+	background-color: white;
+}
+select {
+	padding-right: 1.75rem;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	min-width: 6rem;
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width=".75rem" height=".75rem"%3E%3Cpath fill="none" d="M0 0h24v24H0z"/%3E%3Cpath fill="currentColor" d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"/%3E%3C/svg%3E');
+	background-repeat: no-repeat;
+	background-position: right 0.5rem center;
+}
+select:focus {
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width=".75rem" height=".75rem"%3E%3Cpath fill="none" d="M0 0h24v24H0z"/%3E%3Cpath fill="currentColor" d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z"/%3E%3C/svg%3E');
+}
+
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+	display: inline-flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.5rem;
+	border-radius: 0.1rem;
+	cursor: pointer;
+}
+button > svg,
+input[type=button] > svg,
+input[type=submit] > svg,
+input[type=reset] > svg {
+	display: block;
+	fill: currentColor;
+}
+
+input[type=radio] {
+	position: absolute;
+	left: -50000rem;
+	opacity: 0;
+}
+input[type=radio] + label {
+	display: inline-flex;
+	position: relative;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+input[type=radio] + label::before {
+	display: block;
+	margin-right: 0.25rem;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	background: #abbab8;
+	transition: background 0.1s;
+	vertical-align: middle;
+	content: "";
+}
+input[type=radio] + label::after {
+	display: block;
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	background: #a6f2e8;
+	transform: scale(0.6);
+	opacity: 0;
+	content: "";
+}
+input[type=radio]:checked + label::before {
+	background: #66edff;
+}
+input[type=radio]:checked + label::after {
+	opacity: 1;
+}
+
+input[type=checkbox] {
+	position: absolute;
+	left: -50000rem;
+	opacity: 0;
+}
+input[type=checkbox] + label {
+	display: inline-flex;
+	position: relative;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+input[type=checkbox] + label::before {
+	display: inline-block;
+	margin-right: 0.25rem;
+	width: 1em;
+	height: 1em;
+	border-radius: 0.2rem;
+	background: #abbab8;
+	transition: background 0.1s;
+	vertical-align: middle;
+	content: "";
+}
+input[type=checkbox] + label::after {
+	display: block;
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	border-radius: 0.2rem;
+	background: #a6f2e8;
+	transform: scale(0.6);
+	opacity: 0;
+	content: "";
+}
+input[type=checkbox]:checked + label::before {
+	background: #66edff;
+}
+input[type=checkbox]:checked + label::after {
+	opacity: 1;
+}
+
+blockquote {
+	margin-bottom: 1rem;
+	padding: 0.75rem 1rem;
+	border-left: 0.25rem solid currentColor;
+	border-radius: 0.2rem;
+	line-height: 1.8;
+}
+blockquote:is([data-quote-type=info]) {
+	color: purple;
+	/* 임시 */
+}
+blockquote:is([data-quote-type=success]) {
+	color: darkgreen;
+	/* 임시 */
+}
+blockquote:is([data-quote-type=warning]) {
+	color: tomato;
+	/* 임시 */
+}
+blockquote:is([data-quote-type=error]) {
+	color: red;
+	/* 임시 */
+}
+
+[data-layer-type=alert], [data-layer-type=modal], [data-layer-type=banner], [data-layer-type=toast] {
+	position: fixed;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 1rem 2rem -0.5rem rgba(75, 155, 144, 0.5);
+}
+
+[data-layer-type=toast] {
+	top: 2rem;
+	right: 2rem;
+	transform: scale(0);
+	-webkit-animation: popout 0.5s 1 forwards;
+	        animation: popout 0.5s 1 forwards;
+}
+[data-layer-type=toast]::before {
+	position: absolute;
+	top: 0.3rem;
+	bottom: 0.3rem;
+	left: 0.3rem;
+	width: 0.3rem;
+	border-radius: 0.2rem;
+	background: #81e4d7;
+	content: "";
+}
+
+[data-layer-type=banner] {
+	bottom: 2rem;
+	right: 2rem;
+}
+
+[data-layer-type=modal] {
+	inset: 0;
+	margin: auto;
+	width: 16rem;
+	height: 8rem;
+}
+
+[data-layer-type=alert] {
+	bottom: 2rem;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: min(100% - 10rem, 40rem);
+	-webkit-backdrop-filter: blur(0.5rem);
+	        backdrop-filter: blur(0.5rem);
+}

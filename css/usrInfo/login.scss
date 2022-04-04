@@ -1,0 +1,99 @@
+/* login */
+
+@use '../modules/colors' as clr;
+@use '../modules/mixins' as mix;
+@use '../modules/elements' as elm;
+
+/* ---------- main ---------- */
+
+#frmLogin {
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: min(80% - 1rem, 24rem);
+    height: fit-content;
+    border-radius: .5rem;
+    box-shadow: 0 1rem 2rem -.5rem rgba(clr.$darker, .5);
+
+    > header,
+    > footer {
+        padding: 1rem;
+    }
+}
+
+#inputContainer {
+    padding: 1rem;
+}
+
+[data-input-container] {
+    position: relative;
+
+    & + & {
+        margin-top: 1rem;
+    }
+
+    > input {
+        width: 100%;
+        border: .05rem solid clr.$g-mid;
+
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+
+    > legend {
+        position: absolute;
+        bottom: 100%;
+        margin-left: .25rem;
+        padding: 0 .25rem;
+        background-color: white;
+        transform: translateY(50%);
+        transition: .15s;
+        pointer-events: none;
+    }
+
+    > input:placeholder-shown {
+        & + legend {
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+    }
+}
+
+[for="chkSaveID"] {
+    margin-top: 1rem;
+}
+
+.button_container {
+    display: flex;
+    padding: .5rem 1rem;
+
+    > button {
+        padding: .75rem 1rem;
+        border-radius: elm.$radius-in;
+        font-size: 1rem;
+    }
+}
+
+#btnLogin {
+    flex: 1 0 auto;
+    background: clr.$activated;
+    color: white;
+}
+
+#btnRegister {
+    margin-left: .25rem;
+    background: clr.$g_mid;
+}
+
+/* ---------- main ---------- */
+/* ---------- media queries ---------- */
+
+@media (pointer: coarse) and (hover: none) {
+
+}

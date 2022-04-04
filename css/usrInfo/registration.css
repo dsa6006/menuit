@@ -1,0 +1,51 @@
+/* ---------- theme colors ---------- */
+/* set concept color above (as HSL format) */
+/* ---------- gray tones ---------- */
+/* ---------- @mixin ---------- */
+/* ---------- %placeholder ----------*/
+/* ---------- whatever else ---------- */
+/* ---------- @keyframes ---------- */
+@-webkit-keyframes popout {
+	30% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(0.9);
+	}
+	80% {
+		transform: scale(0.75);
+	}
+	90% {
+		transform: scale(0.95);
+	}
+	95% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes popout {
+	30% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(0.9);
+	}
+	80% {
+		transform: scale(0.75);
+	}
+	90% {
+		transform: scale(0.95);
+	}
+	95% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* registration */
+/* ---------- main ---------- */
+/* ---------- main ---------- */
+/* ---------- media queries ---------- */

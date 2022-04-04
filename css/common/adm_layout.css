@@ -204,6 +204,9 @@ input::placeholder {
 }
 
 /* btnLine */
+.btnLine{
+  display:flex;
+}
 
 .btnLine button{
   padding: 0.5rem 2rem 0.4rem 2rem;
@@ -235,22 +238,6 @@ input::placeholder {
 
 .mainArea {
   padding: 0 0 0 1rem;
-}
-
-
-#btnBox {
-  display: flex;
-}
-
-#btnBox button {
-  padding:.5rem 2rem .4rem 2rem;
-  font-size: 1.1rem;
-  font-family: 'AG_L';
-  BORDER: 0;
-  background: #6d6464;
-  color: #fff;
-  cursor:pointer;
-  margin-left:.5rem;
 }
 
 /* footer */

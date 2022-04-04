@@ -229,7 +229,7 @@ input::placeholder {
 
 /* mainArea */
 
-.mainArea ul.mainText{
+.mainArea .mainText{
   display: flex;
   flex-wrap: wrap;
   /* justify-content: space-evenly; */

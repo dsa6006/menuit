@@ -30,18 +30,16 @@
 .mainArea_table td {
 	text-align: center;
 	padding: 20px 5px 0px;
+	padding: 1rem 0;
 	margin-bottom: 15px;
 	vertical-align: baseline;
 }
 .mainArea_table td:nth-child(4) {
-	width: 100%;
-	text-align: left;
-	display: -webkit-box;
-	overflow: hidden;
+	max-width: 0;
+	white-space: nowrap;
 	text-overflow: ellipsis;
-	-webkit-line-clamp: 1;
-	-webkit-box-orient: vertical;
-	cursor: pointer;
+	overflow: hidden;
+	text-align: left;
 }
 
 .page_box {

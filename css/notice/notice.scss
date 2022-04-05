@@ -2,7 +2,8 @@
     width: 100%;
 
     th {
-        border: 1px solid #dedede;
+        border-bottom: 1px solid #dedede;
+        box-shadow: 0 0.15rem 0 rgb(0 0 0 / 5%);
         padding: 10px 8px;
 
         &:nth-child(1) {
@@ -39,19 +40,16 @@
 
     td {
         text-align: center;
-        padding: 20px 5px 0px;
+        padding: 1rem 0;
         margin-bottom: 15px;
         vertical-align: baseline;
 
         &:nth-child(4) {
-            width: 100%;
-            text-align: left;
-            display: -webkit-box;
-            overflow: hidden;
+            max-width: 0;
+            white-space: nowrap;
             text-overflow: ellipsis;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            cursor: pointer;
+            overflow: hidden;
+            text-align: left;
         }
     }
 }
@@ -144,8 +142,6 @@ div.btnLine {
             }
             
         }
-
-
 
     }
 }

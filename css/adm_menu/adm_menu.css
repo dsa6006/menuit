@@ -1,8 +1,10 @@
 /* layout */
 
+
 .top_cls{
   justify-content: left;
   margin-bottom:0;
+  align-items: flex-end;
 }
 
 .top_cls li:first-child select{
@@ -11,13 +13,22 @@
 .top_cls li select{
   background: #fff;
   border:1px solid #444;
+  padding:.45rem .3rem .35rem .3rem;
 }
 
 .top_cls li select.cls02{
   width:5rem;
 }
 
+.btnLine button{
+  
+}
 
+.btnBox{
+  display:flex;
+  align-items:flex-end;
+  width:10.5rem;
+}
 
 
 /* btnLine */
@@ -155,6 +166,7 @@ article.prodBtm {
   height:100vh;
   background:rgba(0,0,0,.5);
   display:none;
+  z-index:999;
 }
 
 #pop_add .popText{
@@ -164,7 +176,8 @@ article.prodBtm {
   transform: translate(-50%, -50%);
   background:#fff;
   padding:1rem;
-  width:30rem;
+  width:29rem;
+  
 }
 
 #pop_add #pre_imgView{

@@ -116,3 +116,35 @@ tfoot {
         padding: 1rem;
     }
 }
+
+textarea {
+    resize: none;
+}
+
+.form_elements {
+    display: flex;
+    flex-flow: column nowrap;
+    width: max(30rem);
+}
+
+.questContainer {
+    counter-set: questions;
+    overflow-y: auto;
+}
+
+.question_card {
+    counter-increment: questions;
+}
+
+.opt_container {
+    counter-set: options;
+}
+
+.quest_opt {
+    counter-increment: options;
+
+    &::before {
+        content: counter(options);
+    }
+}
+

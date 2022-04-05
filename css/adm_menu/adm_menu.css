@@ -8,6 +8,15 @@
 .top_cls li:first-child select{
   margin-left:0;
 }
+.top_cls li select{
+  background: #fff;
+  border:1px solid #444;
+}
+
+.top_cls li select.cls02{
+  width:5rem;
+}
+
 
 
 
@@ -24,29 +33,28 @@
 
 
 li.eachProd {
-  flex-basis: calc((100% - 12vw) / 4);
+  flex-basis: calc((100% - 9vw) / 3);
     position: relative;
     margin-bottom: 1.2rem;
     margin-right: 1.5vw;
     margin-left: 1.5vw;
-    max-width: calc((100% - 12vw) / 4);
+    max-width: calc((100% - 9vw) / 3);
 }
 
 li.eachProd ul.exhibit{
   position:absolute;
-  top:1rem;
-  left:1rem;
+  top:.5rem;
+  left:.5rem;
   z-index: 10;
   text-align: center;
   box-shadow: 3px 3px 14px;
 }
 
 li.eachProd ul.exhibit li{
-  padding:.3rem .3rem .1rem .3rem;
+  padding:.2rem .2rem 0 .2rem;
   background:rgba(255,255,255,.9);
   color:#444;
-  width:3.5rem;
-  font-weight:bold;
+  width:3rem;
 }
 
 li.eachProd ul.exhibit li:last-child{
@@ -72,8 +80,9 @@ li.eachProd img {
 article.prodBtm {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.6rem;
+  margin-top: 0.3rem;
   align-items: center;
+  flex-wrap:wrap;
 }
 
 .prodBtm select {
@@ -83,30 +92,49 @@ article.prodBtm {
 }
 
 .prodBtm label{
-  width:20%;
+  width:40%;
   flex-grow:0;
-  padding:.3rem .3rem .2rem .3rem;
+  padding:.2rem .2rem .1rem .2rem;
   background:#6d6464;
   color:#fff;
   text-align:center;
   overflow:hidden;
 }
 
+
+
 .prodBtm span {
-  width: 50%;
   flex-grow: 0;
-  padding:0 .3rem;
   background: transparent;
-  display: -webkit-box;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  color:#444;
+}
+
+.prodBtm span.prodName{
+  width:100%;
+  /* background:#efefef; */
+  padding:.2rem 0;
+  margin-bottom:.3rem;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
 }
 
 .prodBtm span.prodCost{
-  width:30%;
+  width:calc(60% - 0.3rem);
   text-align:right;
+  padding:.2rem .2rem .1rem .2rem;
+  background:#efefef;
+}
+
+.prodBtm span.prodCost:after{
+  content:'원';
+  display:inline-block;
+  margin-left:.1rem;
 }
 
 #btnBox {
@@ -130,7 +158,7 @@ article.prodBtm {
   transform: translate(-50%, -50%);
   background:#fff;
   padding:1rem;
-  width:25vw;
+  width:30rem;
 }
 
 #pop_add #pre_imgView{
@@ -194,8 +222,8 @@ article.prodBtm {
 
 input[type="file"] {
   position: absolute;
-  width: 0;
-  height: 0;
+  width: 0 !important;
+  height: 0 !important;
   overflow: hidden;
 }
 

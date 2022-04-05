@@ -25,28 +25,28 @@
     <section id="leftMenu">
       <div class="logo"></div>
       <ul class="menus">
-        <li>
+        <li onclick="location.href='sales.html'">
           <p>매출관리</p>
         </li>
-        <li>
+        <li onclick="location.href='adm_menu.html'">
           <p>메뉴관리</p>
         </li>
-        <li>
+        <li onclick="location.href='order_table.html'">
           <p>주문 및 테이블관리</p>
         </li>
-        <li>
+        <li onclick="location.href='adm_evtMgt.html'">
           <p>이벤트 및 광고관리</p>
         </li>
-        <li>
+        <li onclick="location.href='adm_menu.html'">
           <p>예약 및 대기관리</p>
         </li>
-        <li>
+        <li onclick="location.href='adm_menu.html'">
           <p>회원관리</p>
         </li>
-        <li>
+        <li onclick="location.href='notice.html'">
           <p>게시판</p>
         </li>
-        <li>
+        <li onclick="location.href='setting.html'">
           <p>설정</p>
         </li>
       </ul>
@@ -217,6 +217,97 @@
       <form id="addSurvey">
         <h2 class="popTitle">설문조사 추가</h2>
 
+        <div class="form_elements">
+          <input type="text" name="txtSurveyTitle" id="txtSurveyTitle" placeholder="제목 입력..." maxlength="50">
+
+          <div class="column_protector">
+            <input type="date" name="dateSurvey" id="dateSurvStart">
+            <input type="date" name="dateSurvey" id="dateSurvEnd">
+          </div>
+
+          <div class="questContainer">
+            <template data-quest-item>
+              <div class="question_card" data-required="false">
+                <input type="text" name="txtQuestion" id="" placeholder="질문 입력...">
+
+                <select name="slctQuestType">
+                  <option value="fp" selected>객관식 질문</option>
+                  <option value="fpm">객관식 질문 (중복 가능)</option>
+                  <option value="tp">주관식 질문</option>
+                </select>
+
+                <div class="opt_container" data-question-type="fp">
+                  <template data-rdo-item>
+                    <div class="quest_opt">
+                      <input type="radio" name="" id="" class="quest_rdo">
+                      <label for="" class="quest_lbl"></label>
+                      <button type="button" class="btn_delopt">선택지 삭제</button>
+                    </div>
+                  </template>
+
+                  <template data-chk-item>
+                    <div class="quest_opt">
+                      <input type="checkbox" name="" id="" class="quest_chk">
+                      <label for="" class="quest_lbl"></label>
+                      <button type="button" class="btn_delopt">선택지 삭제</button>
+                    </div>
+                  </template>
+
+                  <div class="opt_control">
+                    <input type="text" name="txtOpt" placeholder="선택지 입력...">
+                    <button type="button" class="btn_addopt">선택지 추가</button>
+                  </div>
+                </div>
+
+                <div class="quest_control">
+                  <button type="button" class="btn_copy">복사</button>
+                  <button type="button" class="btn_remove">삭제</button>
+                  <button type="button" class="btn_req">필수 항목으로</button>
+                </div>
+              </div>
+            </template>
+
+            <!-- 1번 질문 -->
+            <div class="question_card" data-required="false">
+              <input type="text" name="txtQuestion" placeholder="질문 입력...">
+
+              <select name="slctQuestType">
+                <option value="fp" selected>객관식 질문</option>
+                <option value="fpm">객관식 질문 (중복 가능)</option>
+                <option value="tp">주관식 질문</option>
+              </select>
+
+              <div class="opt_container" data-question-type="fp">
+                <div class="quest_opt">
+                  <input type="radio" name="quest1" id="quest1_opt1" class="quest_rdo">
+                  <label for="quest1_opt1" class="quest_lbl">질문명</label>
+                  <button type="button" class="btn_delopt">선택지 삭제</button>
+                </div>
+
+                <div class="quest_opt">
+                  <input type="radio" name="quest1" id="quest1_opt2" class="quest_rdo">
+                  <label for="quest1_opt2" class="quest_lbl">질문명</label>
+                  <button type="button" class="btn_delopt">선택지 삭제</button>
+                </div>
+
+                <div class="opt_control">
+                  <input type="text" name="txtOpt" placeholder="선택지 입력...">
+                  <button type="button" class="btn_addopt">선택지 추가</button>
+                </div>
+              </div>
+
+              <div class="quest_control">
+                <button type="button" class="btn_copy">복사</button>
+                <button type="button" class="btn_remove" disabled>삭제</button>
+                <button type="button" class="btn_req">이 질문을 필수 항목으로</button>
+              </div>
+            </div>
+            <!-- 1번 질문 -->
+          </div>
+
+          <button type="button" class="btn_add_question">항목 추가</button>
+        </div>
+
         <div class="btn_container">
           <button type="submit" class="btn_confirm">
             등록
@@ -226,13 +317,33 @@
             취소
           </button>
         </div>
-      </form>
+      </form> <!-- 설문조사 -->
 
       <form id="addEvent">
         <h2 class="popTitle">이벤트 및 광고 추가</h2>
 
         <div class="form_elements">
           <input type="text" name="txtEvtTitle" id="txtEvtTitle" placeholder="제목 입력..." maxlength="50">
+
+          <div class="column_protector">
+            <input type="radio" name="rdoType" id="rdoAd"><label for="rdoAd">광고</label>
+            <input type="radio" name="rdoType" id="rdoEvent"><label for="rdoEvent">이벤트</label>
+          </div>
+
+          <div class="column_protector">
+            <input type="date" name="dateEvt" id="dateEvtStart">
+            <input type="date" name="dateEvt" id="dateEvtEnd">
+          </div>
+
+          <input type="url" name="txtTube" id="txtTube" placeholder="YouTube 링크 입력..." maxlength="150">
+
+          <div class="column_protector">
+            <input type="file" name="fileAttach" id="fileAttach" hidden="true" aria-hidden="true">
+            <input type="text" name="txtFileName" id="txtFileName" placeholder="파일명 (이미지 또는 동영상)">
+            <button type="button" class="btn_upload">파일 찾기</button>
+          </div>
+
+          <textarea name="" id="" cols="30" rows="5" placeholder="세부 설명 입력..." maxlength="300"></textarea>
         </div>
 
         <div class="btn_container">
@@ -244,7 +355,7 @@
             취소
           </button>
         </div>
-      </form>
+      </form> <!-- 광고 -->
     </div>
   </aside>
 

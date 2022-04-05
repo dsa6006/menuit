@@ -74,14 +74,19 @@ textarea {
 }
 
 
-input[type="text"] {
+input[type="text"],
+input[type="date"],
+input[type="url"],
+select,
+textarea {
   border: 0;
   /* border-bottom: 1px solid #444; */
   background: #e8e8e8;
   padding: 8px;
+  font: inherit;
 }
 
-input::placeholder {
+::placeholder {
   color: #bbb;
 }
 
@@ -95,10 +100,6 @@ input::placeholder {
   background: #6d6464;
   background-clip: padding-box;
 }
-
-
-
-
 
 /* 좌측메뉴 */
 

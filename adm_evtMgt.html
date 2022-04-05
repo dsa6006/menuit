@@ -215,7 +215,7 @@
   <aside id="pop_add" data-show="false">
     <div class="popText">
       <form id="addSurvey" data-show="false">
-        <h2 class="popTitle">설문조사 추가</h2>
+        <h3 class="popTitle">설문조사 추가</h3>
 
         <div class="form_elements">
           <input type="text" name="txtSurveyTitle" id="txtSurveyTitle" placeholder="제목 입력..." maxlength="50">
@@ -227,40 +227,19 @@
 
           <div class="questContainer">
             <template data-quest-item>
-              <div class="question_card" data-required="false">
-                <div class="column_protector">
+              <div class="question_card" data-required="false" data-question-number>
+                <div class="column_protector title">
                   <input type="text" name="txtQuestion" id="" placeholder="질문 입력...">
 
                   <select name="slctQuestType">
-                    <option value="fp" selected>객관식 질문</option>
-                    <option value="fpm">객관식 질문 (중복 가능)</option>
-                    <option value="tp">주관식 질문</option>
+                    <option value="tp" selected>객관식 질문</option>
+                    <option value="tpm">객관식 질문 (중복 가능)</option>
+                    <option value="fp">주관식 질문</option>
                   </select>
                 </div>
 
                 <div class="opt_container" data-question-type="fp">
-                  <template data-rdo-item>
-                    <div class="quest_opt">
-                      <input type="radio" name="" id="" class="quest_rdo">
-                      <label for="" class="quest_lbl"></label>
-                      <button type="button" class="btn_delopt">선택지 삭제</button>
-                    </div>
-                  </template>
 
-                  <template data-chk-item>
-                    <div class="quest_opt">
-                      <input type="checkbox" name="" id="" class="quest_chk">
-                      <label for="" class="quest_lbl"></label>
-                      <button type="button" class="btn_delopt">선택지 삭제</button>
-                    </div>
-                  </template>
-
-                  <template data-text-item>
-                    <div class="quest_opt">
-                      <input type="text" name="" id="" class="quest_text">
-                      <button type="button" class="btn_delopt">선택지 삭제</button>
-                    </div>
-                  </template>
                 </div>
 
                 <div class="opt_control">
@@ -269,36 +248,63 @@
                 </div>
 
                 <div class="quest_control">
-                  <button type="button" class="btn_copy">복사</button>
-                  <button type="button" class="btn_remove">삭제</button>
-                  <button type="button" class="btn_req">필수 항목으로</button>
+                  <button type="button" class="btn_copy">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z"/></svg>
+                    복사
+                  </button>
+                  <button type="button" class="btn_remove">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></svg>
+                    삭제
+                  </button>
+                  <button type="button" class="btn_req">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0L24 0 24 24 0 24z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10c-1.702 0-3.305-.425-4.708-1.175L2 22l1.176-5.29C2.426 15.306 2 13.703 2 12 2 6.477 6.477 2 12 2zm0 2c-4.418 0-8 3.582-8 8 0 1.335.326 2.618.94 3.766l.35.654-.656 2.946 2.948-.654.653.349c1.148.614 2.43.939 3.765.939 4.418 0 8-3.582 8-8s-3.582-8-8-8zm0 3c1.657 0 3 1.343 3 3v1h1v5H8v-5h1v-1c0-1.657 1.343-3 3-3zm2 6h-4v1h4v-1zm-2-4c-.552 0-1 .45-1 1v1h2v-1c0-.552-.448-1-1-1z"/></svg>
+                    필수 항목으로
+                  </button>
                 </div>
               </div>
             </template>
 
-            <!-- 1번 질문 -->
+            <template data-rdo-item>
+              <div class="quest_opt">
+                <input type="radio" name="" id="" class="quest_rdo">
+                <label for="" class="quest_lbl">
+                  <input type="text" name="" id="" class="quest_name">
+                </label>
+                <button type="button" class="btn_delopt">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-9 3h2v6H9v-6zm4 0h2v6h-2v-6zM9 4v2h6V4H9z"/></svg>
+                </button>
+              </div>
+            </template>
+
+            <template data-chk-item>
+              <div class="quest_opt">
+                <input type="checkbox" name="" id="" class="quest_chk">
+                <label for="" class="quest_lbl"></label>
+                <button type="button" class="btn_delopt">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-9 3h2v6H9v-6zm4 0h2v6h-2v-6zM9 4v2h6V4H9z"/></svg>
+                </button>
+              </div>
+            </template>
+
+            <!-- 1번 질문 예시 - data-question-number 증가, 인풋의 name에 quest+인덱스 추가, 필수 질문일 경우 data-required의 boolean 전환 -->
             <div class="question_card" data-required="false" data-question-number="1">
-              <div class="column_protector">
+              <div class="column_protector title">
                 <input type="text" name="txtQuestion" placeholder="질문 입력...">
 
-                <select name="slctQuestType">
-                  <option value="fp" selected>객관식 질문</option>
-                  <option value="fpm">객관식 질문 (중복 가능)</option>
-                  <option value="tp">주관식 질문</option>
+                <select name="slctQuestType" class="select_type">
+                  <option value="tp">객관식 질문</option>
+                  <option value="tpm">객관식 질문 (중복 가능)</option>
+                  <option value="fp">주관식 질문</option>
                 </select>
               </div>
 
               <div class="opt_container" data-question-type="fp">
                 <div class="quest_opt">
-                  <input type="radio" name="quest1" id="quest1_opt1" class="quest_rdo">
-                  <label for="quest1_opt1" class="quest_lbl">질문명</label>
-                  <button type="button" class="btn_delopt">선택지 삭제</button>
-                </div>
-
-                <div class="quest_opt">
-                  <input type="radio" name="quest1" id="quest1_opt2" class="quest_rdo">
-                  <label for="quest1_opt2" class="quest_lbl">질문명</label>
-                  <button type="button" class="btn_delopt">선택지 삭제</button>
+                  <input type="radio" name="quest1" id="quest1_opt1" class="quest_rdo"> <!-- 선택지 name에 질문 번호 추가, id에 opt+인덱스 추가 -->
+                  <label for="quest1_opt1" class="quest_lbl">선택지 1</label>
+                  <button type="button" class="btn_delopt">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M17 6h5v2h-2v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8H2V6h5V3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3zm1 2H6v12h12V8zm-9 3h2v6H9v-6zm4 0h2v6h-2v-6zM9 4v2h6V4H9z"/></svg>
+                  </button>
                 </div>
               </div>
 
@@ -308,9 +314,18 @@
               </div>
 
               <div class="quest_control">
-                <button type="button" class="btn_copy">복사</button>
-                <button type="button" class="btn_remove" disabled>삭제</button>
-                <button type="button" class="btn_req">이 질문을 필수 항목으로</button>
+                <button type="button" class="btn_copy">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z"/></svg>
+                  복사
+                </button>
+                <button type="button" class="btn_remove" disabled>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></svg>
+                  삭제
+                </button>
+                <button type="button" class="btn_req">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0L24 0 24 24 0 24z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10c-1.702 0-3.305-.425-4.708-1.175L2 22l1.176-5.29C2.426 15.306 2 13.703 2 12 2 6.477 6.477 2 12 2zm0 2c-4.418 0-8 3.582-8 8 0 1.335.326 2.618.94 3.766l.35.654-.656 2.946 2.948-.654.653.349c1.148.614 2.43.939 3.765.939 4.418 0 8-3.582 8-8s-3.582-8-8-8zm0 3c1.657 0 3 1.343 3 3v1h1v5H8v-5h1v-1c0-1.657 1.343-3 3-3zm2 6h-4v1h4v-1zm-2-4c-.552 0-1 .45-1 1v1h2v-1c0-.552-.448-1-1-1z"/></svg>
+                  필수 항목으로
+                </button>
               </div>
             </div>
             <!-- 1번 질문 -->
@@ -331,7 +346,7 @@
       </form> <!-- 설문조사 -->
 
       <form id="addEvent" data-show="false">
-        <h2 class="popTitle">이벤트 및 광고 추가</h2>
+        <h3 class="popTitle">이벤트 및 광고 추가</h3>
 
         <div class="form_elements">
           <input type="text" name="txtEvtTitle" id="txtEvtTitle" placeholder="제목 입력..." maxlength="50">
@@ -349,7 +364,7 @@
           <input type="url" name="txtTube" id="txtTube" placeholder="YouTube 링크 입력..." maxlength="150">
 
           <div class="column_protector">
-            <input type="file" name="fileAttach" id="fileAttach" hidden="true" aria-hidden="true">
+            <input type="file" name="fileAttach" id="fileAttach" hidden="true" aria-hidden="true" accept="image/*">
             <input type="text" name="txtFileName" id="txtFileName" placeholder="파일명 (이미지 또는 동영상)" disabled>
             <button type="button" class="btn_upload">파일 찾기</button>
           </div>

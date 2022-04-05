@@ -2,20 +2,24 @@
     flex: 1 0 auto;
 }
 
+.btn_survey {
+    margin-left: 0 !important;
+}
+
 .btn_row_edit,
 .btn_row_del {
     padding: .35rem .5rem .25rem;
     border: 0;
     font-family: 'AG_L';
     color: #fff;
-    cursor: pointer;
 }
 
 .btn_row_edit {
     background-color: #add35e;
 }
 
-.btn_row_del {
+.btn_row_del,
+.btn_delopt {
     background-color: #f5ce32;
 }
 
@@ -121,6 +125,10 @@ textarea {
     resize: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 #pop_add {
     &:is([data-show="false"]) {
         display: none;
@@ -142,14 +150,23 @@ textarea {
     }
 }
 
+.popTitle {
+    margin-bottom: 1rem;
+}
+
 .form_elements {
     display: flex;
     flex-flow: column nowrap;
-    width: max(30rem);
+    width: max(32rem);
 
     > * + * {
-        margin-top: 1rem;
+        margin-top: .5rem;
     }
+}
+
+.btn_confirm {
+    background-color: #6d6464;
+    color: #fff;
 }
 
 .column_protector {
@@ -166,7 +183,6 @@ textarea {
         flex: 1 0 auto;
         padding: .75rem;
         border: none;
-        cursor: pointer;
 
         & + button {
             margin-left: .5rem;
@@ -182,7 +198,6 @@ textarea {
     margin-left: .5rem;
     padding-inline: .5rem;
     border: none;
-    cursor: pointer;
 }
 
 input[type="date"] {
@@ -220,7 +235,12 @@ input[type="checkbox"] {
     padding: .25rem;
     border: 1px solid #fff;
     background-color: #efefef;
+    box-shadow: 0 8px 20px -5px rgba(0 0 0 / .15);
     counter-increment: questions;
+
+    & + & {
+        margin-top: .5rem;
+    }
 
     > .column_protector {
         display: flex;
@@ -232,15 +252,14 @@ input[type="checkbox"] {
 }
 
 .opt_container {
+    margin-block: .5rem;
     padding: .5rem;
     background-color: #fff;
     counter-set: options;
+}
 
-    > .quest_opt {
-        & + .quest_opt {
-            margin-top: .5rem;
-        }
-    }
+.quest_opt {
+
 }
 
 .opt_control {
@@ -251,24 +270,73 @@ input[type="checkbox"] {
     }
 
     > .btn_addopt {
-        margin-left: .5rem;
         padding-inline: .75rem;
         border: none;
+        background-color: #add35e;
     }
 }
 
 .quest_opt {
+    display: flex;
     counter-increment: options;
+
+    & + & {
+        margin-top: .5rem;
+    }
 
     &::before {
         display: inline-block;
+        margin-block: auto;
         margin-right: .25rem;
-        padding-block: 3px 1px;
+        padding-block: 4px 2px;
         width: 1.5rem;
-        background-color: #333;
+        border-radius: 2px;
+        background-color: #6d6464;
         color: #fff;
-        font-size: smaller;
+        font-size: .6rem;
         text-align: center;
         content: counter(options);
     }
+
+    > .btn_delopt {
+        display: inline-flex;
+        justify-content: center;
+        margin-left: auto;
+        padding-inline: .25rem;
+        border: none;
+        color: #6d6464;
+
+        > * {
+            margin-block: auto;
+        }
+    }
+}
+
+.quest_control {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: .5rem;
+
+    > button {
+        display: inline-flex;
+        padding: .25rem .5rem;
+        border: none;
+
+        & + * {
+            margin-left: .25rem;
+        }
+
+        > * {
+            margin-block: auto;
+        }
+
+        > svg {
+            margin-right: .25rem;
+        }
+    }
+}
+
+.btn_add_question {
+    padding: .75rem;
+    border: none;
 }

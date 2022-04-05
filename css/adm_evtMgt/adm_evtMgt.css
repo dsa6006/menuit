@@ -2,20 +2,24 @@
 	flex: 1 0 auto;
 }
 
+.btn_survey {
+	margin-left: 0 !important;
+}
+
 .btn_row_edit,
 .btn_row_del {
 	padding: 0.35rem 0.5rem 0.25rem;
 	border: 0;
 	font-family: "AG_L";
 	color: #fff;
-	cursor: pointer;
 }
 
 .btn_row_edit {
 	background-color: #add35e;
 }
 
-.btn_row_del {
+.btn_row_del,
+.btn_delopt {
 	background-color: #f5ce32;
 }
 
@@ -90,6 +94,10 @@ textarea {
 	resize: none;
 }
 
+button {
+	cursor: pointer;
+}
+
 #pop_add:is([data-show=false]) {
 	display: none;
 }
@@ -106,13 +114,22 @@ textarea {
 	display: initial;
 }
 
+.popTitle {
+	margin-bottom: 1rem;
+}
+
 .form_elements {
 	display: flex;
 	flex-flow: column nowrap;
-	width: 30rem;
+	width: 32rem;
 }
 .form_elements > * + * {
-	margin-top: 1rem;
+	margin-top: 0.5rem;
+}
+
+.btn_confirm {
+	background-color: #6d6464;
+	color: #fff;
 }
 
 .column_protector {
@@ -151,22 +168,118 @@ input[type=date] + input[type=date] {
 	margin-left: 0.5rem;
 }
 
+input[type=radio],
+input[type=checkbox] {
+	margin-block: auto;
+	vertical-align: middle;
+}
+input[type=radio] + label,
+input[type=checkbox] + label {
+	margin-left: 0.25rem;
+	padding-top: 0.25rem;
+}
+input[type=radio] + label + input,
+input[type=checkbox] + label + input {
+	margin-left: 1.5rem;
+}
+
 .questContainer {
+	padding: 0.25rem;
+	height: 15rem;
+	background-color: #ccc;
 	counter-set: questions;
-	overflow-y: auto;
+	overflow-y: scroll;
 }
 
 .question_card {
+	padding: 0.25rem;
+	border: 1px solid #fff;
+	background-color: #efefef;
+	box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.15);
 	counter-increment: questions;
+}
+.question_card + .question_card {
+	margin-top: 0.5rem;
+}
+.question_card > .column_protector {
+	display: flex;
+}
+.question_card > .column_protector > input[type=text] {
+	flex: 1 0 auto;
 }
 
 .opt_container {
+	margin-block: 0.5rem;
+	padding: 0.5rem;
+	background-color: #fff;
 	counter-set: options;
 }
 
+.opt_control {
+	display: flex;
+}
+.opt_control > input {
+	flex: 1 0 auto;
+}
+.opt_control > .btn_addopt {
+	padding-inline: 0.75rem;
+	border: none;
+	background-color: #add35e;
+}
+
 .quest_opt {
+	display: flex;
 	counter-increment: options;
 }
+.quest_opt + .quest_opt {
+	margin-top: 0.5rem;
+}
 .quest_opt::before {
+	display: inline-block;
+	margin-block: auto;
+	margin-right: 0.25rem;
+	padding-block: 4px 2px;
+	width: 1.5rem;
+	border-radius: 2px;
+	background-color: #6d6464;
+	color: #fff;
+	font-size: 0.6rem;
+	text-align: center;
 	content: counter(options);
+}
+.quest_opt > .btn_delopt {
+	display: inline-flex;
+	justify-content: center;
+	margin-left: auto;
+	padding-inline: 0.25rem;
+	border: none;
+	color: #6d6464;
+}
+.quest_opt > .btn_delopt > * {
+	margin-block: auto;
+}
+
+.quest_control {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 0.5rem;
+}
+.quest_control > button {
+	display: inline-flex;
+	padding: 0.25rem 0.5rem;
+	border: none;
+}
+.quest_control > button + * {
+	margin-left: 0.25rem;
+}
+.quest_control > button > * {
+	margin-block: auto;
+}
+.quest_control > button > svg {
+	margin-right: 0.25rem;
+}
+
+.btn_add_question {
+	padding: 0.75rem;
+	border: none;
 }

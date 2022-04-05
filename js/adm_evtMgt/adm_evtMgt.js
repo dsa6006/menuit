@@ -17,6 +17,8 @@ btnAdd.addEventListener('click', function() {
     frmEvent.dataset.show = true;
 });
 
+// 팝업 창 열기
+
 var btnClose = popWindow.querySelectorAll('.btn_cancel');
 
 for(var i = 0; i < btnClose.length; i ++) {
@@ -24,6 +26,8 @@ for(var i = 0; i < btnClose.length; i ++) {
         popWindow.dataset.show = false;
     });
 }
+
+// 팝업 창 닫기
 
 const btnUpload = document.querySelector('.btn_upload');
 const fileUploader = document.getElementById('fileAttach');
@@ -43,3 +47,38 @@ btnUpload.addEventListener('click', function() {
 
     fileUploader.dispatchEvent(triggerClick);
 });
+
+fileUploader.addEventListener('change', function() {
+    const fileURL = document.getElementById('txtFileName');
+
+    fileURL.value = this.value;
+});
+
+// 광고 이미지 및 영상 업로드
+
+const questPrimaryTemplate = document.querySelector('[data-quest-item]');
+const optRadioTemplate = document.querySelector('[data-rdo-item]');
+const optCheckTemplate = document.querySelector('[data-chk-item]');
+
+const questCard = questPrimaryTemplate.content.cloneNode(true).children[0];
+const optionRdo = optRadioTemplate.content.cloneNode(true).children[0];
+const optionChk = optCheckTemplate.content.cloneNode(true).children[0];
+
+const cardContainer = document.querySelector('.questContainer');
+const questContainer = questCard.querySelector('.opt_container');
+
+// 템플릿 설정
+
+const addCard = document.querySelector('.btn_add_question');
+
+addCard.addEventListener('click', function() {
+    cardContainer.append(questCard);
+});
+
+const addOption = document.querySelectorAll('.btn_addopt');
+
+for(var i = 0; i < addOption.length; i ++) {
+    addOption[i].addEventListener('click', function() {
+        alert('끼에엑');
+    });
+}

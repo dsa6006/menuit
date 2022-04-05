@@ -1,5 +1,21 @@
+button{
+  cursor:pointer;
+}
+
 .btnLine{
-  justify-content: flex-end;
+  justify-content: flex-start;
+}
+
+.btnLine button{
+  margin-left:0;
+}
+
+.btnLine button+button{
+  margin-left:.5rem;
+}
+
+.btnLine button.addTable{
+  margin-left:auto;
 }
 
 section.mainText{
@@ -15,19 +31,23 @@ section.mainText{
   background:#f5ce32;
 }
 
+.mainArea .mainText{
+    padding:.75rem .2rem .5rem .5rem;
+}
+
 section.mainText .eachTable{
-    flex-basis: calc((100% - 12vw) / 4);
+    flex-basis: calc((100% - 3.5vw) / 3);
     position: relative;
-    margin-bottom: 1.2rem;
-    margin-right: 1.5vw;
-    margin-left: 1.5vw;
-    max-width: calc((100% - 12vw) / 4);
+    margin-bottom: 1rem;
+    margin-right: .25rem;
+    margin-left: .25rem;
+    max-width: calc((100% - 3.5vw) / 3);
     box-shadow: 3px 3px 15px rgba(75, 75, 75, .2);
     display:flex;
     flex-direction:column;
-    padding:.6rem;
+    padding:.3rem;
     color:#444;
-    height:15rem;
+    border: 4px solid #cec8c8;
 }
 
 .eachTable article{
@@ -36,49 +56,87 @@ section.mainText .eachTable{
 
 .eachTable article.tbName{
   background:rgba(255,255,255,.75);
-  max-width:5rem;
-  margin-bottom:1rem;
-  display: block;
+  margin-bottom:.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tbName input[type=checkbox]{
+  margin-top:.1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .eachTable article.tbName p{
   text-align:center;
-  padding: 0.3rem 0.1rem 0.1rem 0.1rem;
+  padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+  
+}
+
+.eachTable article.tbName p.tbName_title{
+  font-weight:normal;
+  padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+  background: rgba(206,200,200,.3);
+  width:5rem;
 }
 
 .eachTable article.buttons{
   justify-content: flex-end;
   margin-top: auto;
+  flex-direction: column;
 }
 
 .eachTable article button {
-  padding: 0.5rem 2rem 0.4rem 2rem;
-  font-size: 1.1rem;
+  width:100%;
+  padding: 0.3rem 0 0.2rem 0;
+  font-size: 1rem;
   font-family: 'AG_L';
   BORDER: 0;
   background: #6d6464;
   color: #fff;
   cursor: pointer;
-  margin-left: 0.5rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.eachTable article button.modifyMenu{
+  margin:0;
 }
 
 .orderList{
   height:8rem;
   overflow-y:scroll;
-  background:rgba(255,255,255,.2);
-  padding:.5rem
+  background:rgba(206,200,200,.3);
+  padding:.5rem .2rem .5rem .5rem;
+  margin-bottom: 0.3rem;
 }
 
 .orderList li{
   display:flex;
+  flex-wrap:wrap;
+  padding-bottom: 0.3rem;
+  justify-content: space-between;
+  font-size: .9rem;
+}
+
+.orderList li+li{
+  margin-top:.25rem;
 }
 
 .orderList li span.prodName{
-  width:50%;
+  width:calc(100% - 3rem);
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: nowrap;
+  color:#444;
+  margin-right: 0.5rem;
+  /* font-weight: bold; */
 }
 
 .orderList li span.quantity{
-  width:25%;
+  width:2.5rem;
   text-align: center;
 }
 
@@ -90,11 +148,117 @@ section.mainText .eachTable{
 
 .orderList li span.prodPrice{
   margin-left:auto;
-  width:25%;
+  background: #cec8c8;
+  padding: 0.3rem 0.3rem 0 0.3rem;
+  /* color: #fff; */
+  width: 5rem;
+  font-size: 0.8rem;
+  display:flex;
+  justify-content: space-between;
 }
 
-.orderList li span.prodPrice:before{
-  content:'￦';
-  display:inline-block;
-  margin-right:6px;
+.orderList li span.prodPrice .unit{
+
+}
+
+
+/* 팝업 */
+
+#pop_add{
+  display: none;
+}
+
+#pop_add .popText{
+  width:40rem;
+}
+
+.popText h3{
+  margin-bottom:1rem;
+}
+
+.input_tbName{
+  margin-bottom:.5rem;
+  width:100%;
+}
+
+ul.inputLine{
+  display:flex;
+  
+}
+
+.selectType, .selectName{
+  margin-right:.5rem;
+}
+
+select.selectType{
+  width:8rem;
+}
+
+select.selectName{
+  width:20rem;
+}
+
+li.theNumber{
+  display:flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+li.theNumber label{
+  margin-right: 0.5rem;
+}
+
+li.theNumber input{
+  width:5rem;
+}
+
+input.inputNumber{
+  
+}
+
+.sumPrice{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  width:100%;
+}
+
+.sumPrice label{
+  width:3rem;
+  text-align: center;
+}
+
+.sumPrice p{
+  background:rgba(206,200,200,.3);
+  width:calc(100% - 3.5rem);
+  padding:.3rem .5rem .1rem .5rem;
+  display:flex;
+  justify-content: space-between;
+}
+
+#pop_add .btnLine{
+  padding-left:0;
+  margin:5rem 0 0 0;
+  flex-wrap:wrap;
+}
+
+#pop_add .btnLine button{
+  width:calc((100% - 0.5rem) / 2);
+}
+
+#pop_add .btnLine button.btnWide{
+  width:100%;
+  margin-bottom: 0.5rem;
+  background: #ededed;
+  color: #6d6464;
+}
+
+#pop_add .btnLine button.pop_close{
+  background:#ededed;
+  color:#6d6464;
+  margin-left:.5rem;
+}
+
+#pop_add .btnLine button+button{
+  margin-left:0;
 }

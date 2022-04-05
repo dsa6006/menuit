@@ -2,6 +2,10 @@ button{
   cursor:pointer;
 }
 
+button img{
+  margin-right:.5rem;
+}
+
 .btnLine{
   justify-content: flex-start;
 }
@@ -183,7 +187,12 @@ section.mainText .eachTable{
 
 ul.inputLine{
   display:flex;
-  
+  align-items: center;
+}
+
+.inputLine li.lineDelete{
+  background:#cec8c8;
+  color:#6d6464;
 }
 
 .selectType, .selectName{
@@ -195,7 +204,7 @@ select.selectType{
 }
 
 select.selectName{
-  width:20rem;
+  width:18rem;
 }
 
 li.theNumber{
@@ -261,4 +270,8 @@ input.inputNumber{
 
 #pop_add .btnLine button+button{
   margin-left:0;
+}
+
+#pop_add .btnLine button.addTb{
+  padding: 0.5rem 2rem 0.4rem 1rem;
 }

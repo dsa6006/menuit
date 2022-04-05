@@ -235,7 +235,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   /* justify-content: space-evenly; */
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   border: 2px solid #6d6464;
   background: #fff;
   height: 80vh;

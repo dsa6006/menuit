@@ -97,13 +97,14 @@
 
                         </tbody>
                     </table>
-
-                    <ul class="table_pager">
-                        <li class="pager_prev">이전</li>
-                        <li class="pager_item current">1</li>
-                        <li class="pager_item">2</li>
-                        <li class="pager_next">다음</li>
-                      </ul>
+                    <div class="page_box">
+                        <ul class="table_pager">
+                            <li class="pager_prev">이전</li>
+                            <li class="pager_item current">1</li>
+                            <li class="pager_item">2</li>
+                            <li class="pager_next">다음</li>
+                        </ul>
+                    </div>
 
                 </article>
             </div>
@@ -119,9 +120,13 @@
                     <option>선택2</option>
                     <option>선택3</option>
                 </select>
-                <input type="file">
+                <div>
+                    <input type="file" id="file" multiple>
+                    <label for="file">파일첨부</label>
+                    <input class="upload-name" value="첨부파일" placeholder="첨부파일"  readonly>
+                </div>
                 <div class="edit">
-                    서머노트
+                    <div id="summernote"></div>
                 </div>
 
                 <div>
@@ -132,8 +137,18 @@
 
         </section>
 
+
         <script src="js/common/jquery-3.1.1.min.js"></script>
         <script src="js/common/default.js"></script>
+        <script>
+            $("#file").on('change', function () {
+
+                var fileName = $("#file").val();
+
+                $(".upload-name").val(fileName);
+
+            });
+        </script>
 
 
         <footer id="footer">

@@ -57,7 +57,7 @@
 }
 
 
-.page_box{
+.page_box {
     padding: 1rem;
     margin: 0 auto;
 }
@@ -80,61 +80,89 @@ div.btnLine {
     display: none;
 
     .popText {
-        width: 50vw;
+     
         display: flex;
         flex-direction: column;
         margin-bottom: 5px;
 
-        h3{
+        h3 {
             padding: 8px 0;
         }
 
-        select {
-            margin-top: 6px;
-            padding: 7px;
-            outline: 0;
-            border: 1px solid #dedede;
-        }
+        .choice {
+            display: flex;
+            align-items: center;
+            margin: .3rem 0;
 
-        label{
-            background: #6d6464;
-            padding: 5px 10px;
-            color: #fff;
-            margin-top: 5px;
-            display: inline-block;
-        }
 
-        input.upload-name {
-           padding: 4px;
-           outline: 0;
-           border: 1px solid #dedede;
-           width: calc(100% - 80px);
+            &:is(select) {
+                margin-top: .5rem;
+                padding: 7px;
+                outline: 0;
+                border: 1px solid #dedede;
+            }
 
-        }
+            label {
+                background: #8a8383;
+                padding: 5px 10px;
+                color: #fff;
+                margin-right: .5rem;
+                display: inline-block;
+            }
 
-        input[type=file] {
-            position: absolute;
-            width: 0;
-            height: 0;
-            padding: 0;
-            overflow: hidden;
-            border: 0;
+            input[type=file] {
+                position: absolute;
+                width: 0;
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+                border: 0;
+            }
         }
 
         .edit {
-            height: 350px;
-            border: 1px solid #999;
-            margin-top: 5px;
+            margin-top: .5rem;
+
         }
 
-        button {
-            margin-top: 5px;
-            padding: 5px 10px;
+        .pop_btn button {
+            margin-top: .5rem;
+            padding: 15px 10px;
             background-color: #6d6464;
+            color: #fff;
             outline: 0;
             border: 0;
-            color: #fff;
             cursor: pointer;
+            width: 49.5%;
+            font-family: inherit;
+            font-size: 16px;
+
+            &.pop_close{
+                background-color: #ededed;
+                color: #6d6464;
+
+            }
+            
         }
+
+
+
     }
+}
+
+
+/*서머노트*/
+
+#summernote {
+    height: 350px;
+
+}
+
+.note-modal-backdrop {
+    z-index: -1 !important;
+}
+
+.note-placeholder{
+    display: none !important;
+    
 }

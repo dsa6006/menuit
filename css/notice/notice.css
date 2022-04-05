@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .mainArea_table {
 	width: 100%;
 }
@@ -59,7 +60,6 @@ div.btnLine .writing {
 	display: none;
 }
 #pop_add .popText {
-	width: 50vw;
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 5px;
@@ -67,26 +67,25 @@ div.btnLine .writing {
 #pop_add .popText h3 {
 	padding: 8px 0;
 }
-#pop_add .popText select {
-	margin-top: 6px;
+#pop_add .popText .choice {
+	display: flex;
+	align-items: center;
+	margin: 0.3rem 0;
+}
+#pop_add .popText .choice:is(select) {
+	margin-top: 0.5rem;
 	padding: 7px;
 	outline: 0;
 	border: 1px solid #dedede;
 }
-#pop_add .popText label {
-	background: #6d6464;
+#pop_add .popText .choice label {
+	background: #8a8383;
 	padding: 5px 10px;
 	color: #fff;
-	margin-top: 5px;
+	margin-right: 0.5rem;
 	display: inline-block;
 }
-#pop_add .popText input.upload-name {
-	padding: 4px;
-	outline: 0;
-	border: 1px solid #dedede;
-	width: calc(100% - 80px);
-}
-#pop_add .popText input[type=file] {
+#pop_add .popText .choice input[type=file] {
 	position: absolute;
 	width: 0;
 	height: 0;
@@ -95,16 +94,34 @@ div.btnLine .writing {
 	border: 0;
 }
 #pop_add .popText .edit {
-	height: 350px;
-	border: 1px solid #999;
-	margin-top: 5px;
+	margin-top: 0.5rem;
 }
-#pop_add .popText button {
-	margin-top: 5px;
-	padding: 5px 10px;
+#pop_add .popText .pop_btn button {
+	margin-top: 0.5rem;
+	padding: 15px 10px;
 	background-color: #6d6464;
+	color: #fff;
 	outline: 0;
 	border: 0;
-	color: #fff;
 	cursor: pointer;
+	width: 49.5%;
+	font-family: inherit;
+	font-size: 16px;
+}
+#pop_add .popText .pop_btn button.pop_close {
+	background-color: #ededed;
+	color: #6d6464;
+}
+
+/*서머노트*/
+#summernote {
+	height: 350px;
+}
+
+.note-modal-backdrop {
+	z-index: -1 !important;
+}
+
+.note-placeholder {
+	display: none !important;
 }

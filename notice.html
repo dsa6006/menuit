@@ -14,6 +14,8 @@
    <![endif]-->
     <link href="css/common/adm_layout.css" rel="stylesheet" type="text/css">
     <link href="css/notice/notice.css" rel="stylesheet" type="text/css">
+    <link href="js/summernote/css/summernote-lite.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -81,7 +83,7 @@
                                 <td><input type="checkbox"></td>
                                 <td>1</td>
                                 <td>공지</td>
-                                <td>안녕하세요안녕하세요안녕하세요 안녕하세요안녕하세요안녕하세요안녕하세요 안녕하세요안녕하세요안녕하세요 안녕하세요</td>
+                                <td onclick="location.href='notice_DT.html'">안녕하세요안녕하세요안녕하세요 안녕하세요안녕하세요안녕하세요안녕하세요 안녕하세요안녕하세요안녕하세요 안녕하세요</td>
                                 <td>admin</td>
                                 <td>2022.04.04</td>
                             </tr>
@@ -114,41 +116,40 @@
             <div class="popText">
                 <h3>글쓰기</h3>
                 <input type="text" placeholder="제목을 입력하세요">
-                <select>
+                <select class="choice">
                     <option>선택</option>
                     <option>선택1</option>
                     <option>선택2</option>
                     <option>선택3</option>
                 </select>
-                <div>
-                    <input type="file" id="file" multiple>
-                    <label for="file">파일첨부</label>
-                    <input class="upload-name" value="첨부파일" placeholder="첨부파일"  readonly>
-                </div>
-                <div class="edit">
-                    <div id="summernote"></div>
-                </div>
+                <div class="choice">
+                    <input type="file" id="file" multiple="multiple">
+                    <label for="file">파일찾기</label>
+                    <ul class="fileList">
+                        <li>첨부파일 리스트1.png</li>
+                        <li>첨부파일 리스트2.png</li>
+                        <li>첨부파일 리스트3.png</li>
 
-                <div>
+                    </ul>
+                </div>
+                <form method="post" class="edit">
+                    <div id="summernote"></div>
+                </form>
+
+                <div class="pop_btn">
                     <button>등록</button>
                     <button class="pop_close">취소</button>
                 </div>
             </div>
-
         </section>
 
 
         <script src="js/common/jquery-3.1.1.min.js"></script>
         <script src="js/common/default.js"></script>
-        <script>
-            $("#file").on('change', function () {
-
-                var fileName = $("#file").val();
-
-                $(".upload-name").val(fileName);
-
-            });
-        </script>
+        <script src="js/summernote/js/summernote-image-attributes.js"></script>
+        <script src="js/summernote/js/summernote-lite.js"></script>
+        <script src="js/summernote/lang/summernote-ko-KR.js"></script>
+        <script src="js/notice/notice.js"></script>
 
 
         <footer id="footer">

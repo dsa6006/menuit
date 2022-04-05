@@ -1,0 +1,53 @@
+.mainArea {
+
+
+    .mainText {
+        display: inherit;
+
+        h3 {
+            text-align: center;
+            border-bottom: 1px solid #dedede;
+            padding:1rem;
+        }
+
+        .sub_name {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            padding: 1rem;
+            border-bottom: 1px solid #dedede;
+        }
+        .notice_title{
+            font-weight: normal;
+            margin-left: 1rem ;
+            
+        }
+        .notice_txt{
+            padding: 1rem;
+
+            p{
+                padding: .2rem;
+            }
+
+            img{
+              max-width: 80vw;
+            }
+        }
+
+        .attach{
+            padding: 1rem;
+            border-bottom: 1px solid #dedede;
+            li{
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+            li+li{
+                margin-top: .2rem;
+            }
+        }
+    }
+}
+
+.btnLine button{
+    margin-left: 0;
+}

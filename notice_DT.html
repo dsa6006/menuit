@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+
+
+    <title>게시판</title>
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+   <![endif]-->
+    <link href="css/common/adm_layout.css" rel="stylesheet" type="text/css">
+    <link href="css/notice_DT/notice_DT.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <section id="leftMenu">
+            <div class="logo"></div>
+            <ul class="menus">
+                <li onclick="location.href='sales.html'">
+                    <p>매출관리</p>
+                </li>
+                <li onclick="location.href='adm_menu.html'">
+                    <p>메뉴관리</p>
+                </li>
+                <li onclick="location.href='order_table.html'">
+                    <p>주문 및 테이블관리</p>
+                </li>
+                <li onclick="location.href='adm_evtMgt.html'">
+                    <p>이벤트 및 광고관리</p>
+                </li>
+                <li>
+                    <p>예약 및 대기관리</p>
+                </li>
+                <li>
+                    <p>회원관리</p>
+                </li>
+                <li onclick="location.href='notice.html'">
+                    <p>게시판</p>
+                </li>
+                <li onclick="location.href='setting.html'">
+                    <p>설정</p>
+                </li>
+            </ul>
+        </section>
+        <section id="rightText">
+            <div class="textTop">
+                <h2>게시판</h2>
+                <ul class="top_loginOut">
+                    <li>
+                        <p><span>OOO</span>님 환영합니다.</p>
+                    </li>
+                    <li>로그아웃</li>
+                </ul>
+
+            </div>
+            <div class="btnLine">
+                <button>목록</button>
+                
+            </div>
+            <div class="mainArea">
+                <article class="prodMenus mainText">
+                    <h3>안녕하세요 여러분</h3>
+                    <div class="sub_name">
+                        <span class="first_span">작성일자 <span class="notice_title" id="cdate">2022-03-08</span></span>
+                        <span>작성자 <span class="notice_title" id="cuser">관리자</span></span>
+                    </div>
+                    <div class="attach">
+                        <table class="attach_in">
+                            <tbody><tr>
+                                <th>첨부파일</th>
+                                <td class="notice_title">
+                                    <ul>
+                                        <li>qqqqqq.txt</li>
+                                        <li>qqqqqq.img</li>
+                                        
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+
+                    <div class="notice_txt">
+                        <p>내용칸</p>
+                        <p>내용칸</p>
+                        <p><img src="img/sample01.jpg"></p>
+                    </div>
+
+                </article>
+            </div>
+
+        </section>
+
+
+
+
+        <script src="js/notice/notice.js"></script>
+
+
+        <footer id="footer">
+            <p> Copyright ⓒ <b>2022 by MenuIt.</b> All pictures cannot be copied without permission.</p>
+        </footer>
+
+    </div>
+    <!--wrap -->
+
+
+
+
+</body>
+
+</html>

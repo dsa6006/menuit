@@ -166,6 +166,7 @@ textarea {
         flex: 1 0 auto;
         padding: .75rem;
         border: none;
+        cursor: pointer;
 
         & + button {
             margin-left: .5rem;
@@ -181,6 +182,7 @@ textarea {
     margin-left: .5rem;
     padding-inline: .5rem;
     border: none;
+    cursor: pointer;
 }
 
 input[type="date"] {
@@ -191,23 +193,82 @@ input[type="date"] {
     }
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+    margin-block: auto;
+    vertical-align: middle;
+
+    & + label {
+        margin-left: .25rem;
+        padding-top: .25rem;
+
+        & + input {
+            margin-left: 1.5rem;
+        }
+    }
+}
+
 .questContainer {
+    padding: .25rem;
+    height: 15rem;
+    background-color: #ccc;
     counter-set: questions;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .question_card {
+    padding: .25rem;
+    border: 1px solid #fff;
+    background-color: #efefef;
     counter-increment: questions;
+
+    > .column_protector {
+        display: flex;
+
+        > input[type="text"] {
+            flex: 1 0 auto;
+        }
+    }
 }
 
 .opt_container {
+    padding: .5rem;
+    background-color: #fff;
     counter-set: options;
+
+    > .quest_opt {
+        & + .quest_opt {
+            margin-top: .5rem;
+        }
+    }
+}
+
+.opt_control {
+    display: flex;
+
+    > input {
+        flex: 1 0 auto;
+    }
+
+    > .btn_addopt {
+        margin-left: .5rem;
+        padding-inline: .75rem;
+        border: none;
+    }
 }
 
 .quest_opt {
     counter-increment: options;
 
     &::before {
+        display: inline-block;
+        margin-right: .25rem;
+        padding-block: 3px 1px;
+        width: 1.5rem;
+        background-color: #333;
+        color: #fff;
+        font-size: smaller;
+        text-align: center;
         content: counter(options);
     }
 }

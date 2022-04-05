@@ -129,6 +129,7 @@ textarea {
 	flex: 1 0 auto;
 	padding: 0.75rem;
 	border: none;
+	cursor: pointer;
 }
 .btn_container > button + button {
 	margin-left: 0.5rem;
@@ -142,6 +143,7 @@ textarea {
 	margin-left: 0.5rem;
 	padding-inline: 0.5rem;
 	border: none;
+	cursor: pointer;
 }
 
 input[type=date] {
@@ -151,22 +153,74 @@ input[type=date] + input[type=date] {
 	margin-left: 0.5rem;
 }
 
+input[type=radio],
+input[type=checkbox] {
+	margin-block: auto;
+	vertical-align: middle;
+}
+input[type=radio] + label,
+input[type=checkbox] + label {
+	margin-left: 0.25rem;
+	padding-top: 0.25rem;
+}
+input[type=radio] + label + input,
+input[type=checkbox] + label + input {
+	margin-left: 1.5rem;
+}
+
 .questContainer {
+	padding: 0.25rem;
+	height: 15rem;
+	background-color: #ccc;
 	counter-set: questions;
-	overflow-y: auto;
+	overflow-y: scroll;
 }
 
 .question_card {
+	padding: 0.25rem;
+	border: 1px solid #fff;
+	background-color: #efefef;
 	counter-increment: questions;
+}
+.question_card > .column_protector {
+	display: flex;
+}
+.question_card > .column_protector > input[type=text] {
+	flex: 1 0 auto;
 }
 
 .opt_container {
+	padding: 0.5rem;
+	background-color: #fff;
 	counter-set: options;
+}
+.opt_container > .quest_opt + .quest_opt {
+	margin-top: 0.5rem;
+}
+
+.opt_control {
+	display: flex;
+}
+.opt_control > input {
+	flex: 1 0 auto;
+}
+.opt_control > .btn_addopt {
+	margin-left: 0.5rem;
+	padding-inline: 0.75rem;
+	border: none;
 }
 
 .quest_opt {
 	counter-increment: options;
 }
 .quest_opt::before {
+	display: inline-block;
+	margin-right: 0.25rem;
+	padding-block: 3px 1px;
+	width: 1.5rem;
+	background-color: #333;
+	color: #fff;
+	font-size: smaller;
+	text-align: center;
 	content: counter(options);
 }

@@ -228,13 +228,15 @@
           <div class="questContainer">
             <template data-quest-item>
               <div class="question_card" data-required="false">
-                <input type="text" name="txtQuestion" id="" placeholder="질문 입력...">
+                <div class="column_protector">
+                  <input type="text" name="txtQuestion" id="" placeholder="질문 입력...">
 
-                <select name="slctQuestType">
-                  <option value="fp" selected>객관식 질문</option>
-                  <option value="fpm">객관식 질문 (중복 가능)</option>
-                  <option value="tp">주관식 질문</option>
-                </select>
+                  <select name="slctQuestType">
+                    <option value="fp" selected>객관식 질문</option>
+                    <option value="fpm">객관식 질문 (중복 가능)</option>
+                    <option value="tp">주관식 질문</option>
+                  </select>
+                </div>
 
                 <div class="opt_container" data-question-type="fp">
                   <template data-rdo-item>
@@ -253,10 +255,17 @@
                     </div>
                   </template>
 
-                  <div class="opt_control">
-                    <input type="text" name="txtOpt" placeholder="선택지 입력...">
-                    <button type="button" class="btn_addopt">선택지 추가</button>
-                  </div>
+                  <template data-text-item>
+                    <div class="quest_opt">
+                      <input type="text" name="" id="" class="quest_text">
+                      <button type="button" class="btn_delopt">선택지 삭제</button>
+                    </div>
+                  </template>
+                </div>
+
+                <div class="opt_control">
+                  <input type="text" name="txtOpt" placeholder="선택지 입력...">
+                  <button type="button" class="btn_addopt">선택지 추가</button>
                 </div>
 
                 <div class="quest_control">
@@ -269,13 +278,15 @@
 
             <!-- 1번 질문 -->
             <div class="question_card" data-required="false" data-question-number="1">
-              <input type="text" name="txtQuestion" placeholder="질문 입력...">
+              <div class="column_protector">
+                <input type="text" name="txtQuestion" placeholder="질문 입력...">
 
-              <select name="slctQuestType">
-                <option value="fp" selected>객관식 질문</option>
-                <option value="fpm">객관식 질문 (중복 가능)</option>
-                <option value="tp">주관식 질문</option>
-              </select>
+                <select name="slctQuestType">
+                  <option value="fp" selected>객관식 질문</option>
+                  <option value="fpm">객관식 질문 (중복 가능)</option>
+                  <option value="tp">주관식 질문</option>
+                </select>
+              </div>
 
               <div class="opt_container" data-question-type="fp">
                 <div class="quest_opt">
@@ -289,11 +300,11 @@
                   <label for="quest1_opt2" class="quest_lbl">질문명</label>
                   <button type="button" class="btn_delopt">선택지 삭제</button>
                 </div>
+              </div>
 
-                <div class="opt_control">
-                  <input type="text" name="txtOpt" placeholder="선택지 입력...">
-                  <button type="button" class="btn_addopt">선택지 추가</button>
-                </div>
+              <div class="opt_control">
+                <input type="text" name="txtOpt" placeholder="선택지 입력...">
+                <button type="button" class="btn_addopt">선택지 추가</button>
               </div>
 
               <div class="quest_control">
@@ -325,7 +336,7 @@
         <div class="form_elements">
           <input type="text" name="txtEvtTitle" id="txtEvtTitle" placeholder="제목 입력..." maxlength="50">
 
-          <div class="column_protector checks">
+          <div class="column_protector">
             <input type="radio" name="rdoType" id="rdoAd"><label for="rdoAd">광고</label>
             <input type="radio" name="rdoType" id="rdoEvent"><label for="rdoEvent">이벤트</label>
           </div>

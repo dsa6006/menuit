@@ -3,7 +3,8 @@
 	width: 100%;
 }
 .mainArea_table th {
-	border: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	box-shadow: 0 0.15rem 0 rgba(0, 0, 0, 0.05);
 	padding: 10px 8px;
 }
 .mainArea_table th:nth-child(1) {
@@ -29,7 +30,6 @@
 }
 .mainArea_table td {
 	text-align: center;
-	padding: 20px 5px 0px;
 	padding: 1rem 0;
 	margin-bottom: 15px;
 	vertical-align: baseline;

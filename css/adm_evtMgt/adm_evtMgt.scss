@@ -121,10 +121,74 @@ textarea {
     resize: none;
 }
 
+#pop_add {
+    &:is([data-show="false"]) {
+        display: none;
+    }
+
+    &:is([data-show="true"]) {
+        display: initial;
+    }
+}
+
+#addSurvey,
+#addEvent {
+    &:is([data-show="false"]) {
+        display: none;
+    }
+
+    &:is([data-show="true"]) {
+        display: initial;
+    }
+}
+
 .form_elements {
     display: flex;
     flex-flow: column nowrap;
     width: max(30rem);
+
+    > * + * {
+        margin-top: 1rem;
+    }
+}
+
+.column_protector {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.btn_container {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 1rem;
+
+    > button {
+        flex: 1 0 auto;
+        padding: .75rem;
+        border: none;
+
+        & + button {
+            margin-left: .5rem;
+        }
+    }
+}
+
+#txtFileName {
+    flex: 1 0 auto;
+}
+
+.btn_upload {
+    margin-left: .5rem;
+    padding-inline: .5rem;
+    border: none;
+}
+
+input[type="date"] {
+    flex: 1 0 auto;
+
+    & + & {
+        margin-left: .5rem;
+    }
 }
 
 .questContainer {
@@ -147,4 +211,3 @@ textarea {
         content: counter(options);
     }
 }
-

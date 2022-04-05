@@ -212,9 +212,9 @@
   </div>
   <!--wrap -->
 
-  <aside id="pop_add">
+  <aside id="pop_add" data-show="false">
     <div class="popText">
-      <form id="addSurvey">
+      <form id="addSurvey" data-show="false">
         <h2 class="popTitle">설문조사 추가</h2>
 
         <div class="form_elements">
@@ -268,7 +268,7 @@
             </template>
 
             <!-- 1번 질문 -->
-            <div class="question_card" data-required="false">
+            <div class="question_card" data-required="false" data-question-number="1">
               <input type="text" name="txtQuestion" placeholder="질문 입력...">
 
               <select name="slctQuestType">
@@ -319,13 +319,13 @@
         </div>
       </form> <!-- 설문조사 -->
 
-      <form id="addEvent">
+      <form id="addEvent" data-show="false">
         <h2 class="popTitle">이벤트 및 광고 추가</h2>
 
         <div class="form_elements">
           <input type="text" name="txtEvtTitle" id="txtEvtTitle" placeholder="제목 입력..." maxlength="50">
 
-          <div class="column_protector">
+          <div class="column_protector checks">
             <input type="radio" name="rdoType" id="rdoAd"><label for="rdoAd">광고</label>
             <input type="radio" name="rdoType" id="rdoEvent"><label for="rdoEvent">이벤트</label>
           </div>
@@ -339,7 +339,7 @@
 
           <div class="column_protector">
             <input type="file" name="fileAttach" id="fileAttach" hidden="true" aria-hidden="true">
-            <input type="text" name="txtFileName" id="txtFileName" placeholder="파일명 (이미지 또는 동영상)">
+            <input type="text" name="txtFileName" id="txtFileName" placeholder="파일명 (이미지 또는 동영상)" disabled>
             <button type="button" class="btn_upload">파일 찾기</button>
           </div>
 

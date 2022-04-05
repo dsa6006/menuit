@@ -57,20 +57,9 @@
 }
 
 
-.boardPage {
-    position: absolute;
-    bottom: 30px;
-    text-align: center;
-    padding: 10px 5px;
-    cursor: pointer;
-
-    .btn_group {
-        display: flex;
-
-        a {
-            margin-right: 5px;
-        }
-    }
+.page_box{
+    padding: 1rem;
+    margin: 0 auto;
 }
 
 
@@ -96,14 +85,40 @@ div.btnLine {
         flex-direction: column;
         margin-bottom: 5px;
 
+        h3{
+            padding: 8px 0;
+        }
+
         select {
             margin-top: 6px;
             padding: 7px;
             outline: 0;
+            border: 1px solid #dedede;
         }
 
-        input {
+        label{
+            background: #6d6464;
+            padding: 5px 10px;
+            color: #fff;
             margin-top: 5px;
+            display: inline-block;
+        }
+
+        input.upload-name {
+           padding: 4px;
+           outline: 0;
+           border: 1px solid #dedede;
+           width: calc(100% - 80px);
+
+        }
+
+        input[type=file] {
+            position: absolute;
+            width: 0;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 0;
         }
 
         .edit {

@@ -15,18 +15,23 @@ section.mainText{
   background:#f5ce32;
 }
 
+.mainArea .mainText{
+    padding:.75rem .2rem .5rem .5rem;
+}
+
 section.mainText .eachTable{
-    flex-basis: calc((100% - 9vw) / 3);
+    flex-basis: calc((100% - 7vw) / 3);
     position: relative;
-    margin-bottom: 1.2rem;
-    margin-right: 1.5vw;
-    margin-left: 1.5vw;
-    max-width: calc((100% - 9vw) / 3);
+    margin-bottom: 1rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    max-width: calc((100% - 7vw) / 3);
     box-shadow: 3px 3px 15px rgba(75, 75, 75, .2);
     display:flex;
     flex-direction:column;
     padding:.6rem;
     color:#444;
+    border: 4px solid #cec8c8;
 }
 
 .eachTable article{
@@ -35,14 +40,22 @@ section.mainText .eachTable{
 
 .eachTable article.tbName{
   background:rgba(255,255,255,.75);
-  max-width:5rem;
-  margin-bottom:1rem;
-  display: block;
+  margin-bottom:.3rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .eachTable article.tbName p{
   text-align:center;
-  padding: 0.3rem 0.1rem 0.1rem 0.1rem;
+  padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+  
+}
+
+.eachTable article.tbName p.tbName_title{
+  font-weight:normal;
+  padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+  background: rgba(206,200,200,.3);
+  width:5rem;
 }
 
 .eachTable article.buttons{
@@ -52,29 +65,37 @@ section.mainText .eachTable{
 }
 
 .eachTable article button {
-  padding: 0.3rem 1rem 0.2rem 1rem;
+  width:100%;
+  padding: 0.3rem 0 0.2rem 0;
   font-size: 1rem;
   font-family: 'AG_L';
   BORDER: 0;
   background: #6d6464;
   color: #fff;
   cursor: pointer;
-  margin: 0 0 0.3rem 0.5rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.eachTable article button.modifyMenu{
+  margin:0;
 }
 
 .orderList{
   height:8rem;
   overflow-y:scroll;
-  background:rgba(255,255,255,.2);
-  padding:.5rem;
+  background:rgba(206,200,200,.3);
+  padding:.5rem .2rem .5rem .5rem;
   margin-bottom: 0.5rem;
 }
 
 .orderList li{
   display:flex;
   flex-wrap:wrap;
-  border-bottom: 1px solid #444;
-  margin-bottom: 0.3rem;
+  border-bottom: 1px solid #888;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  justify-content: space-between;
+  font-size: .9rem;
 }
 
 .orderList li span.prodName{
@@ -83,12 +104,16 @@ section.mainText .eachTable{
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  white-space: nowrap;
   color:#444;
+  margin-bottom: 0.4rem;
+  /* font-weight: bold; */
 }
 
 .orderList li span.quantity{
   width:25%;
   text-align: center;
+  margin-top: 0.1rem;
 }
 
 .orderList li span.quantity:after{
@@ -99,10 +124,15 @@ section.mainText .eachTable{
 
 .orderList li span.prodPrice{
   margin-left:auto;
+  background: #cec8c8;
+  padding: 0.3rem 0.3rem 0 0.3rem;
+  /* color: #fff; */
+  width: 5rem;
+  font-size: 0.8rem;
+  display:flex;
+  justify-content: space-between;
 }
 
-.orderList li span.prodPrice:before{
-  content:'￦';
-  display:inline-block;
-  margin-right:6px;
+.orderList li span.prodPrice .unit{
+
 }

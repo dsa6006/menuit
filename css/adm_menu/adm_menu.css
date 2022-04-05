@@ -52,11 +52,7 @@ li.eachProd ul.exhibit{
 
 li.eachProd ul.exhibit li{
   padding:.2rem .2rem 0 .2rem;
-<<<<<<< Updated upstream
-  background:rgba(255,255,255,.9);
-=======
   background:rgba(255,255,255,.75);
->>>>>>> Stashed changes
   color:#444;
   width:3rem;
 }
@@ -86,11 +82,7 @@ article.prodBtm {
   justify-content: space-between;
   margin-top: 0.3rem;
   align-items: center;
-<<<<<<< Updated upstream
   flex-wrap:wrap;
-=======
-  flex-wrap: wrap;
->>>>>>> Stashed changes
 }
 
 .prodBtm select {
@@ -102,11 +94,7 @@ article.prodBtm {
 .prodBtm label{
   width:40%;
   flex-grow:0;
-<<<<<<< Updated upstream
   padding:.2rem .2rem .1rem .2rem;
-=======
-  padding:.2rem .3rem .1rem .3rem;
->>>>>>> Stashed changes
   background:#6d6464;
   color:#fff;
   text-align:center;
@@ -139,16 +127,11 @@ article.prodBtm {
 .prodBtm span.prodName{
   width:100%;
   margin-bottom: 0.3rem;
-  background: #efefef;
   padding: 0.2rem;
 }
 
 .prodBtm span.prodCost{
-<<<<<<< Updated upstream
   width:calc(60% - 0.3rem);
-=======
-  width:60%;
->>>>>>> Stashed changes
   text-align:right;
   padding:.2rem .2rem .1rem .2rem;
   background:#efefef;
